@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/switch.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        #send svg:hover {
+            fill: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+        }
+        .issueTrack img{
+            height: 120px;
+            width: 120px;
+        }
+        .mileStone img{
+            height: 120px;
+            width: 120px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+    </div>
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="orange">
+            <a href="index.html" class="logo ml-auto mr-auto">
+                <img src="http://demo.themekita.com/demo-millenium/millenium/examples/assets/img/logo.svg" alt="navbar brand" class="navbar-brand" height="35">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+            <div class="container-fluid">
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <div class="avatar-sm">
+                                <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user animated fadeIn">
+                            <div class="dropdown-user-scroll scrollbar-outer">
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="u-text">
+                                            <h4 class="fs-16">Hizrian</h4>
+                                            <p class="text-muted fs-14">hello@themekita.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <a class="dropdown-item" href="#">Inbox</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="fa fa-th"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item active">
+                        <a href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Work Bench</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-star"></i>
+                            <p>Hired Professionals</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-docs"></i>
+                            <p>Reports &amp; Timesheets</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro-profile.html">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content content-full">
+            <div class="page-navs bg-white">
+                <div class="nav-scroller">
+                    <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" id="myTab">
+                        <a class="nav-link active show" data-toggle="tab" id="nav-tab1-tab" role="tab" href="#tab1">Project Details</a>
+                        <div class="ml-auto">
+                            <a class="v-align-middle btn semi-bold" href="javascript:void(0)">
+                                <i class="icon-refresh semi-bold"></i> &nbsp;&nbsp;&nbsp;Request Update</a>
+                            <a href="javascript:void(0)" class="v-align-middle btn semi-bold" data-target="#reportPro" data-toggle="modal">
+                                <i class="icon-flag semi-bold"></i> &nbsp;&nbsp;&nbsp;Report Pro</a>
+                            <a class="modal-links v-align-middle btn semi-bold" href="javascript:void(0)" data-target="#AddToFolder" data-toggle="modal">
+                                <i class="icon-cloud-download semi-bold"></i> &nbsp;&nbsp;&nbsp;Download Receipt
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-inner">
+                <div class="row">
+                    <div class="col-md-7">
+                        <!-- START BREADCRUMB -->
+                        <ol class="breadcrumb m-b-30">
+                            <li class="breadcrumb-item"><a href="client-dashboard.html">Work Bench</a></li>
+                            <li class="breadcrumb-item active text-truncate">Enter an sort data in CTH1 document format</li>
+                        </ol>
+                        <!-- END BREADCRUMB -->
+                        <h6 class="text-muted p-b-10">PROJECT INFORMATION</h6>
+                        <h4 class="p-b-20">Data Entry using CTH1 document format</h4>
+                        <div class="row">
+                            <div class="col-md-4 col-4">
+                                <h6 class="text-muted p-b-10">COMPLETION DATE</h6>
+                                <p class="p-b-20 font-weight-bold">02.02.2018</p>
+                            </div>
+                            <div class="col-md-4 col-4">
+                                <h6 class="text-muted p-b-10">UPDATE FREQUENCY</h6>
+                                <p class="p-b-20 font-weight-bold">Hourly</p>
+                            </div>
+                            <div class="col-md-4 col-4">
+                                <h6 class="text-muted p-b-10">PROJECT STATUS</h6>
+                                <p class="text-warning font-weight-bold">ONGOING</p>
+                            </div>
+                        </div>
+                        <hr class="">
+                        <h6 class="text-muted p-b-10">TASK OVERVIEW</h6>
+                        <p class="p-b-20">Enter and sort data in CTH 1 document format Prepare a 10 slide presentation for the upcoming Child Protection summit in Doha.
+                            The Slides should reflect the current state of the child
+                        </p>
+                        <hr class="">
+                        <h6 class="text-muted p-b-10">ASSIGNED PROFESSIONAL</h6>
+                        <div class="row v-align-middle justify-content-start">
+                            <div class="col-md-9 align-self-center">
+                                <div class="user-pic">
+                                    <a href="javascript:void(0);">
+                                        <img alt="Profile Image" width="60" height="60" style="border-radius: 30px" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
+                                    </a>
+                                </div>
+                                <div class="m-l-10 align-self-center">
+                                    <h5>David R. David</h5>
+                                    <h6 class="fs-15 text-muted p-t-15">Lagos, Nigeria</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <!---resume expereince section-->
+                        <div id="exp-1" class="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="card m-t-5">
+                                <div class="card-header" role="tab" id="headingIssue">
+                                    <div class="card-head-row">
+                                        <div class="card-title">
+                                            <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#heading-2" aria-expanded="true" aria-controls="heading-2">Issues tracker</h6>
+                                        </div>
+                                        <div class="card-tools">
+                                            <a href="javascript:void(0);" data-target="#raiseIssue" data-toggle="modal"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="heading-2" class="collapse show issueTrack" role="tabpanel" aria-labelledby="headingIssue">
+                                    <div class="card-body">
+                                        <div class="padding-30 text-center">
+                                            <img src="assets/images/no-data.svg">
+                                            <h6 class="text-muted">No issues are being tracked at the moment</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--card-two--->
+                            <div class="card m-t-5">
+                                <div class="card-header" role="tab" id="headingMilestones">
+                                    <div class="card-head-row">
+                                        <div class="card-title">
+                                            <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-2" href="#heading-3" aria-expanded="true" aria-controls="heading-3">Milestone Tracker</h6>
+                                        </div>
+                                        <div class="card-tools">
+                                            <a href="javascript:void(0);" data-target="#AddMilestone" data-toggle="modal"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="heading-3" class="collapse show mileStone" role="tabpanel" aria-labelledby="headingMilestones">
+                                    <div class="card-body">
+                                        <div class="padding-30 text-center">
+                                            <img src="assets/images/no-data.svg">
+                                            <h6 class="text-muted">No issues are being tracked at the moment</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--card-three--->
+                            <div class="card m-t-5">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <div class="card-head-row">
+                                        <div class="card-title">
+                                            <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-3" href="#data-3" aria-expanded="true" aria-controls="data-3">ASSIGNED PRO</h6>
+                                        </div>
+                                        <div class="card-tools">
+                                            <a href="javascript:void(0);"><i class="icon-star" style="font-size: 20px;color: #a1a1a1;"></i></a>&nbsp;&nbsp;
+                                            <a href="javascript:void(0);" data-target="#reportPro" data-toggle="modal"><i class="icon-flag" style="font-size: 20px;color: #000;"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="data-3" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="card-body">
+
+                                        <!--<hr class="">
+                                        <div class="row v-align-middle" style="line-height: 30px">
+                                            <div class="col-12">
+                                                <h5 class="p-t-10 p-b-10">PERFORMANCE RATING</h5>
+                                                <div>
+                                                    <h6>Professionalism <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                                                </div>
+                                                <div class="p-t-15">
+                                                    <h6>Timely Delivery <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                                                </div>
+                                                <div class="p-t-15">
+                                                    <h6>Communication Skill <span class="badge badge-danger float-right fs-14" style="border-radius: 3px;">33%</span></h6>
+                                                </div>
+                                                <div class="p-t-15">
+                                                    <h6>Quality of Work <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">93%</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!---section ends--->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row next-step d-none" style="position: fixed;bottom: 0px;width: 100%;background-color: #fff;min-height: 60px;line-height: 55px;">
+                    <div class="containers">
+                        <div class="d-flex flex-row v-align-middle">
+                            <div class="align-self-center">
+                                <div class="user-pic">
+                                    <a href="pro-dashboard.html">
+                                        <img alt="Profile Image" width="30" height="30" style="border-radius: 30px" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="m-l-10 align-self-center">
+                                <h6>Belvex Construction Limited</h6>
+                                <h6 class="fs-13 text-muted">Abuja, Nigeria</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal to create issue-->
+<div class="modal fade" id="raiseIssue" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">RAISE AN ISSUE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="textIssue" class="control-label">what seems to be the issue? give the details here</label>
+                            <textarea class="form-control" required name="textIssue" id="textIssue" style="min-height: 100px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default form-group-default-select2">
+                            <label class="subs" for="selectType">Issue Priority</label>
+                            <select name="selectType" id="selectType" class="full-width" style="width: 100%;">
+                                <option value="">Critical</option>
+                                <option value="">Urgent</option>
+                                <option value="">Nice to have</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">CREATE ISSUE</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--modal to report pro-->
+<div class="modal fade" id="reportPro" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">REPORT PRO<br/>
+                <span class="fs-15">use the form below to manage/report your pro. </span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="radio radio-success">
+                            <div class="p-b-20">
+                                <input type="radio" value="yes" name="optionyes" id="day">
+                                <label for="day" class="fs-14">This account information belongs to someone else</label>
+                            </div>
+                            <div class="p-b-20">
+                                <input type="radio" checked="checked" value="no" name="optionyes" id="oneweek">
+                                <label for="oneweek" class="fs-14">The assigned pro does not know what he/she is doing and I would like a change</label>
+                            </div>
+                            <div class="p-b-20">
+                                <input type="radio" checked="checked" value="no" name="optionyes" id="2weeks">
+                                <label for="2weeks" class="fs-14">The conduct of the assigned pro isn't professional or cordial</label>
+                            </div>
+                            <div class="p-b-20">
+                                <input type="radio" checked="checked" value="no" name="optionyes" id="4weeks">
+                                <label for="4weeks" class="fs-14">The assigned pro has not reported any work as per work schedule</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="proIssueDetail" class="control-label">Give detail of what the issue is</label>
+                            <textarea class="form-control" required name="proIssueDetail" id="proIssueDetail" style="min-height: 100px;"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">REPORT ASSIGNED PRO</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/switch.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(function(){
+        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
+            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="radio"]').prop("checked", true);
+
+        });
+    });
+    $(document).ready(function() {
+        $('.full-width').select2();
+    });
+    var elem = document.querySelector('.switchery');
+    var init = new Switchery(elem, { size: 'small',color: '#fb6332', jackColor: '#fff' });
+    $('.tasks-header-toggler').on('click', function () {
+        $(this).closest('.tasks-section').find('.tasks-list-w').slideToggle();
+        return false;
+    });
+</script>
+</html>

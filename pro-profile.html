@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/switch.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        #send svg:hover {
+            fill: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+    </div>
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="orange">
+            <a href="index.html" class="logo ml-auto mr-auto">
+                <img src="http://demo.themekita.com/demo-millenium/millenium/examples/assets/img/logo.svg" alt="navbar brand" class="navbar-brand" height="35">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+            <div class="container-fluid">
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item toggle-nav-search hidden-caret">
+                        <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <div class="avatar-sm">
+                                <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user animated fadeIn">
+                            <div class="dropdown-user-scroll scrollbar-outer">
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="u-text">
+                                            <h4 class="fs-16">Hizrian</h4>
+                                            <p class="text-muted fs-14">hello@themekita.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <a class="dropdown-item" href="#">My Balance</a>
+                                    <a class="dropdown-item" href="#">Inbox</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Account Setting</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="fa fa-th"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item">
+                        <a href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-energy"></i>
+                            <p>Task History</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+                    </li>
+                    <li class="nav-item">
+                        <a href="e-resume.html">
+                            <i class="icon-docs"></i>
+                            <p>E-Resume</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="javascript:void(0);">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content content-full">
+            <div class="page-navs bg-white">
+                <div class="nav-scroller">
+                    <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" id="myTab">
+                        <a class="nav-link active show" data-toggle="tab" id="nav-tab1-tab" role="tab" href="#tab1">Project Details</a>
+                        <div class="ml-auto">
+                            <a class="v-align-middle btn semi-bold" href="javascript:void(0)" data-target="#AddToFolder" data-toggle="modal">
+                                <i class="icon-share semi-bold"></i> &nbsp;&nbsp;&nbsp;Share Resume</a>
+                            <a href="javascript:void(0)" class="v-align-middle btn semi-bold">
+                                <i class="icon-cloud-download semi-bold"></i>&nbsp;&nbsp;&nbsp;Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-inner">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <!-- START BREADCRUMB -->
+                        <ol class="breadcrumb m-b-30">
+                            <li class="breadcrumb-item"><a href="pro-dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active text-truncate">Profile</li>
+                        </ol>
+                        <!-- END BREADCRUMB -->
+                        <div class="row v-align-middle justify-content-start">
+                            <div class="col-md-12 align-self-center">
+                                <div class="user-pic">
+                                    <a href="pro-dashboard.html">
+                                        <img alt="Profile Image" width="60" height="60" style="border-radius: 60px" data-src-retina="assets/images/user-suggestion/2.jpg" src="assets/images/user-suggestion/2.jpg">
+                                    </a>
+                                </div>
+                                <div class="m-l-10 align-self-center">
+                                    <h6 class="p-b-10 fs-16 align-items-end">David R. David
+                                        <a href="javascript:void(0)" data-target="#editProfile" data-toggle="modal"><span class="float-right fs-12 text-muted">EDIT</span></a></h6>
+                                    <h6 class="fs-15 text-muted">testemailaddress@gmail.com</h6>
+                                    <h6 class="fs-15 text-muted">Lagos, Nigeria</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="">
+                        <div class="row v-align-middle" style="line-height: 30px">
+                                <div class="col-2 mini-bg align-items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.5 75.5">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #fb6332;
+                                                }
+
+                                                .cls-2 {
+                                                    fill: #fff;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <g id="icon-ratings" transform="translate(-1155 -1397)">
+                                            <circle id="Icon.BG" class="cls-1" cx="37.75" cy="37.75" r="37.75" transform="translate(1155 1397)"/>
+                                            <path id="time-countdown" class="cls-2" d="M0,17.575A13.587,13.587,0,0,1,13.671,3.9,13.368,13.368,0,0,1,21.877,6.64l1.757-1.76L22.069,3.318a1.887,1.887,0,0,1,0-2.733,1.891,1.891,0,0,1,2.736,0l5.86,5.859a1.888,1.888,0,0,1,0,2.733,1.891,1.891,0,0,1-2.737,0L26.367,7.616,24.609,9.373a13.371,13.371,0,0,1,2.733,8.2A13.587,13.587,0,0,1,13.671,31.246,13.587,13.587,0,0,1,0,17.575Zm3.908,0a9.672,9.672,0,0,0,9.763,9.767,9.673,9.673,0,0,0,9.767-9.767,9.67,9.67,0,0,0-9.767-9.764A9.669,9.669,0,0,0,3.908,17.575Zm7.811,1.952V11.716h3.908v3.907h3.9v3.9Z" transform="translate(1176.75 1419.502)"/>
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="col-10">
+                                    <h5 class="p-t-10 p-b-10">PERFORMANCE RATING</h5>
+                                    <div>
+                                            <h6>Professionalism <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                                    </div>
+                                    <div class="p-t-15">
+                                        <h6>Timely Delivery <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                                    </div>
+                                    <div class="p-t-15">
+                                        <h6>Communication Skill <span class="badge badge-danger float-right fs-14" style="border-radius: 3px;">33%</span></h6>
+                                    </div>
+                                    <div class="p-t-15">
+                                        <h6>Quality of Work <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">93%</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        <hr class="">
+                        <div class="row v-align-middle" style="line-height: 30px">
+                            <div class="col-2 mini-bg align-items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 91">
+                                    <defs>
+                                        <style>
+                                            .cls-3 {
+                                                fill: #14ce6e;
+                                            }
+
+                                            .cls-4 {
+                                                fill: #fff;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <g id="icon-earn" transform="translate(-19 -520)">
+                                        <circle id="Icon.BG" class="cls-3" cx="45.5" cy="45.5" r="45.5" transform="translate(19 520)"/>
+                                        <path id="ic_trending_up_24px" class="cls-4" d="M32.333,6,37.3,10.962,26.722,21.535l-8.667-8.667L2,28.945,5.055,32l13-13,8.667,8.667,13.65-13.628L45.333,19V6Z" transform="translate(41 549)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="col-10">
+                                <h5 class="p-t-10 p-b-10">EARNINGS<span class="badge badge-default float-right fs-16 semi-bold" style="border-radius: 3px;">&#8358;1,341,800</span></h5>
+                                <h6 class="text-muted">You are amongst the top 60% earners on Clictask</h6>
+                            </div>
+                        </div>
+                        </div>
+                    <div class="col-md-8 col-sm-8">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<div class="modal fade" id="editProfile" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">EDIT PROFILE</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="first-name" class="control-label">First name</label>
+                            <input type="text" class="form-control" required name="first-name" id="first-name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="last-name" class="control-label">last name</label>
+                            <input type="text" class="form-control" required name="last-name" id="last-name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default required disabled">
+                            <label for="email-address" class="control-label">Email Address</label>
+                            <input type="email" class="form-control" readonly required name="email-address" id="email-address">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default required disabled">
+                            <label for="phonenumber" class="control-label">Phone number</label>
+                            <input type="tel" class="form-control" readonly required name="phonenumber" id="phonenumber">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">UPDATE PROFILE</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/switch.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.full-width').select2();
+        $('.full-width').(isWindow(window/2));
+    });
+    var elem = document.querySelector('.switchery');
+    var init = new Switchery(elem, { size: 'small',color: '#fb6332', jackColor: '#fff' });
+    $('.tasks-header-toggler').on('click', function () {
+        $(this).closest('.tasks-section').find('.tasks-list-w').slideToggle();
+        return false;
+    });
+</script>
+</html>

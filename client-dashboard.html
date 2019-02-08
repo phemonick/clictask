@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/switch.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        #send svg:hover {
+            fill: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+        }
+        .taskRipple{
+            background-color: #fb6332;
+            color: #fff;
+            padding: 20px 18px;
+            border-radius: 4px;
+            border: none;
+            font-size: 25px;
+        }
+        #newTasks{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="orange">
+            <a href="index.html" class="logo ml-auto mr-auto">
+                <img src="" alt="clictask" class="navbar-brand">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+            <div class="container-fluid">
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <div class="avatar-sm">
+                                <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-user animated fadeIn">
+                            <div class="dropdown-user-scroll scrollbar-outer" >
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="u-text">
+                                            <h4 class="fs-16">Hizrian</h4>
+                                            <p class="text-muted fs-14">hello@themekita.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="fa fa-th"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item active">
+                        <a href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Work Bench</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-star"></i>
+                            <p>Hired Professionals</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-docs"></i>
+                            <p>Reports &amp; Timesheets</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro-profile.html">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <div class="content">
+            <div class="panel-header bg-danger-gradient">
+                <div class="page-inner pt-5 pb-5">
+                    <h2 class="text-white pb-2">Welcome back David!</h2>
+                    <h5 class="text-white op-7 mb-2">you have 2 project ending soon.</h5>
+                </div>
+            </div>
+            <div class="page-navs bg-white">
+                <div class="nav-scroller">
+                    <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" id="myTab">
+                        <a class="nav-link active show" data-toggle="tab" id="nav-active-tab" role="tab" href="#active">All Projects<span class="count ml-1">(5)</span></a>
+                        <a class="nav-link" data-toggle="tab" id="nav-pending-tab" href="#pending" aria-selected="false" role="tab">Pending Projects<span class="count ml-1">(1)</span></a>
+                        <a class="nav-link" data-toggle="tab" id="nav-completed-tab" href="#tab3" aria-selected="false" role="tab">Completed Projects<span class="count ml-1">(1)</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-inner m-t-20">
+                <!---floating button---->
+                <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane active" id="active" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <div class="card-head-row">
+                                    <div class="card-title">
+                                    </div>
+                                    <div class="card-tools">
+                                        <div class="form-group form-group-default required">
+                                            <label for="search-tasks" class="control-label">Search by task name</label>
+                                            <input type="text" class="form-control" required name="search-tasks" id="search-tasks">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="">
+                                        <thead>
+                                        <tr class="no-border">
+                                            <th style="width:40%">Project Title</th>
+                                            <th style="width:20%">Estimated Cost</th>
+                                            <th style="width:20%">Deadline</th>
+                                            <th style="width:20%">Project Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="v-align-middle">
+                                                <p class="font-weight-bold"><a href="project-info.html">
+                                                    Enter and sort data in CTH 1 document format.</a></p>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p class="semi-bold">&#8358;35,800</p>
+                                                <h6 class="text-muted text-uppercase fs-13">Paid by Milestone</h6>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p class="semi-bold">09.Feb.2019</p>
+                                                <h6 class="text-muted text-uppercase fs-13">in 3 weeks</h6>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p><i class="fa fa-circle-o u-color-secondary u-mr-xsmall"></i>&nbsp;&nbsp;Ongoing</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="v-align-middle">
+                                                <p class="font-weight-bold"><a href="suggestions.html">Transcribe podcast</a></p>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p class="semi-bold">&#8358;5,000</p>
+                                                <h6 class="text-muted text-uppercase fs-13">Paid Hourly</h6>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p class="semi-bold">02.Feb.2019</p>
+                                                <h6 class="text-muted text-uppercase fs-13">in 2 weeks</h6>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p><i class="fa fa-circle-o u-color-success u-mr-xsmall"></i>&nbsp;&nbsp;Pending</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="v-align-middle ">
+                                                <p class="font-weight-bold">Powerpoint Slide</p>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p class="semi-bold">&#8358;70,000</p>
+                                                <h6 class="text-muted text-uppercase fs-13">Paid Hourly</h6>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p class="semi-bold">02.Mar.2019</p>
+                                                <h6 class="text-muted text-uppercase fs-13">in 6 weeks</h6>
+                                            </td>
+                                            <td class="v-align-middle">
+                                                <p><i class="fa fa-circle-o u-color-info u-mr-xsmall"></i>&nbsp;&nbsp;Finishing Up</p>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!---pending tab starts-->
+
+                </div>
+                <div id="newTasks">
+                    <button class="taskRipple"><i class="icon-plus"></i></button>
+                </div>
+                <!--en floating button--->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/switch.js"></script>
+<script src="assets/js/essentials.js"></script>
+</html>

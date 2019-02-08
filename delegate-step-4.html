@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+            color: #000;
+        }
+        .container-2{
+            width: 60%;
+            margin: 0px auto;
+        }
+        .card {
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            -moz-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            border: 0;
+        }
+        @media (max-width:480px){
+            .container-2{
+                width: 95%;
+                margin:0px auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+<!-- ***** Header Area Start ***** -->
+<header id="step-delegate" class="header-area position-fixed">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav v-align-middle">
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav text-center">
+                        <li class="float-left">
+                            <a href="index.html">
+                                <i class="icon-arrow-left fs-16"></i>
+                            </a>
+                        </li>
+                        <li><a href="delegate-step-1.html">Select Category</a></li>
+                        <li>
+                            <a href="delegate-step-2.html">Describe Tasks</a>
+                        </li>
+                        <li><a href="delegate-step-3.html">Tasks Details</a></li>
+                        <li>
+                            <a href="javascript:void(0);" style="color: #fb6332;" class="semi-bold">Expertise &amp; Payment</a>
+                        </li>
+                    </ul>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="section" id="forms">
+    <div class="container-2 margin-top-10">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <div class="card-head-row">
+                            <div class="card-title">
+                                <h6 class="text-muted text-uppercase semi-bold p-b-10">Preferred payment cycle</h6>
+                                <span>tell us how you want to pay out to your attached pro</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="radio radio-success">
+                                <div class="p-b-20">
+                                    <input type="radio" value="yes" name="optionyes" id="milestone">
+                                    <label for="milestone" class="fs-14"><b>MILESTONES</b> - allow me to set milestone and pay pro according to achievement of those milestones</label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="hourly">
+                                    <label for="hourly" class="fs-14"><b>HOURLY RATE</b> - request for quote/hour and pay based on the total duration of the project</label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" value="no" name="optionyes" id="fixed">
+                                    <label for="fixed" class="fs-14"><b>FIXED CONTINIOUS PAYMENT</b> - for projects with long lifespan that has fixed weekly/monthly payment cycle</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <div class="card-head-row">
+                            <div class="card-title">
+                                <h6 class="text-muted text-uppercase semi-bold p-b-10">required level of experience</h6>
+                                <span>For basic tasks, we recommend using extry level. If its a bigger project, we say go for an expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="radio radio-success">
+                                <div class="p-b-20">
+                                    <input type="radio" value="yes" name="optionyes" id="entry">
+                                    <label for="entry" class="fs-14"><b>ENTRY LEVEL</b> pros provide the most affordable way to get your stuff done</label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="intern">
+                                    <label for="intern" class="fs-14"><b>INTERNS/INTERMEDIATES</b> are a blend of experience and value</label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="expert">
+                                    <label for="expert" class="fs-14"><b>EXPERT</b> Level are top experts, for the highest rate</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row float-right">
+                    <a href="delegate-step-3.html" class="btn btn-secondary btn-lg previous semi-bold float-left" style="line-height: 30px">Previous - Task Detail</a>
+                    <a href="confirmation.html" class="btn btn-secondary btn-lg continue semi-bold float-right" style="line-height: 30px">Continue to Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/custom.js"></script>
+</html>

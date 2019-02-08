@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        .bg-light{
+            background-color: #f9f9f9;
+        }
+        .table thead th {
+            border-top: none;
+        }
+        .dropdown-menu .dropdown-menu-grid
+        {
+            padding:0;
+            margin:0;
+            display:table;
+            table-layout:fixed;
+            width:100%;
+            white-space: nowrap;
+        }.dropdown-menu .dropdown-menu-grid .menu-grid-row{
+            display:table-row
+         }.dropdown-menu .dropdown-menu-grid .menu-grid-row>div{
+          display:table-cell;
+          vertical-align:middle;
+           text-align:center}
+        .dropdown-menu .dropdown-menu-grid .menu-grid-row>div a{
+            vertical-align:middle;
+            text-align:center;
+            padding:35px 5px
+        }.dropdown-menu .dropdown-menu-grid .menu-grid-row>div a i{
+           font-size:2rem;
+           text-align:center
+         }.dropdown-menu .dropdown-menu-grid .menu-grid-row>div a span{
+          display:block;
+          font-weight:400
+          }
+            .taskRipple{
+                background-color: #fb6332;
+                color: #fff;
+                padding: 20px 18px;
+                border-radius: 4px;
+                border: none;
+                font-size: 25px;
+            }
+            #newTasks{
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+        .card-hover:hover{
+            webkit-transform: translateY(-4px) scale(1.01);
+            -moz-transform: translateY(-4px) scale(1.01);
+            -ms-transform: translateY(-4px) scale(1.01);
+            -o-transform: translateY(-4px) scale(1.01);
+            transform: translateY(-4px) scale(1.01);
+            -webkit-box-shadow: 0 14px 24px rgba(62,57,107,.1);
+            box-shadow: 0 14px 24px rgba(62,57,107,.1);
+        }
+        .card-hover {
+            -webkit-transition: all .25s ease;
+            -o-transition: all .25s ease;
+            -moz-transition: all .25s ease;
+            transition: all .25s ease;
+        }
+        .box {
+            border-radius: 2px;
+            padding: 10px;
+        }
+        .modal.fade.fill-in {
+            background-color: rgba(255, 255, 255, 0);
+            -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s;
+            /*&.in{
+                          background-color: rgba(255, 255, 255, 0.85);
+                            .modal-dialog{
+                                opacity: 1;
+                              .scale(1);
+                          }
+                      }*/
+        }
+        .modal.fade.fill-in > .close {
+            opacity: 1;
+            z-index: 9999;
+        }
+        .modal.fade.fill-in > .close > i {
+            font-size: 16px;
+        }
+        .modal.fade.fill-in .modal-dialog {
+            /*display: table;*/
+            height: 100%;
+        }
+        .modal.fade.fill-in .modal-content {
+            /*display: table-cell;*/
+            /*vertical-align: middle;*/
+            border: 0;
+            background: transparent;
+        }
+        .modal.fade.fill-in .modal-content .modal-header {
+            border-bottom: 0px;
+        }
+        .modal.fade.fill-in.show {
+            background-color: rgba(255, 255, 255, 1);
+        }
+        .modal.fade.fill-in.show .modal-dialog {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        .modal.fade.fill-in .modal-dialog {
+            opacity: 0;
+            -webkit-transform: scale(0.6);
+            -ms-transform: scale(0.6);
+            transform: scale(0.6);
+        }
+         </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+    </div>
+    <div class="main-header">
+    <!-- Logo Header -->
+    <div class="logo-header" data-background-color="orange">
+        <a href="index.html" class="logo ml-auto mr-auto">
+            <img src="http://demo.themekita.com/demo-millenium/millenium/examples/assets/img/logo.svg" alt="navbar brand" class="navbar-brand" height="35">
+        </a>
+        <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+        </button>
+        <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+    </div>
+    <!-- End Logo Header -->
+
+    <!-- Navbar Header -->
+    <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+        <div class="container-fluid">
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                <li class="nav-item dropdown hidden-caret">
+                    <a class="nav-link" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-expanded="false">
+                        <i class="icon-grid"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right p-0">
+                        <div class="dropdown-menu-grid">
+                            <div class="menu-grid-row">
+                                <div><a class="dropdown-item  border-bottom border-right" href="apps.mail.html"><i class="icon-envelope-letter"></i><span>Sumbit Report</span></a></div>
+                                <div><a class="dropdown-item  border-bottom" href="apps.messages.html"><i class="icon dripicons-message"></i><span>Messages</span></a></div>
+                            </div>
+                            <div class="menu-grid-row">
+                                <div><a class="dropdown-item  border-right" href="apps.contacts.html"><i class="icon dripicons-archive"></i><span>Contacts</span></a></div>
+                                <div> <a class="dropdown-item" href="apps.calendar.html"><i class="icon dripicons-calendar"></i><span>Calendar</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown hidden-caret">
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <div class="avatar-sm">
+                            <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user animated fadeIn">
+                        <div class="dropdown-user-scroll scrollbar-outer">
+                            <li>
+                                <div class="user-box">
+                                    <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                    <div class="u-text">
+                                        <h4 class="fs-16">Hizrian</h4>
+                                        <p class="text-muted fs-14">hello@themekita.com</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">My Profile</a>
+                                <a class="dropdown-item" href="#">My Balance</a>
+                                <a class="dropdown-item" href="#">Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link quick-sidebar-toggler">
+                        <i class="fa fa-th"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item active">
+                        <a data-toggle="collapse" href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Workspace</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-energy"></i>
+                            <p>Worklist</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+                    </li>
+                    <li class="nav-item">
+                        <a href="e-resume.html">
+                            <i class="icon-docs"></i>
+                            <p>E-Resume</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro-profile.html">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar -->
+    <div class="main-panel">
+    <div class="content">
+       <!-- <div class="panel-header bg-danger-gradient">
+            <div class="page-inner pt-5 pb-5">
+                <h2 class="text-white pb-2">Welcome back Hizrian!</h2>
+                <h5 class="text-white op-7 mb-2">Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.</h5>
+            </div>
+        </div>-->
+        <div class="page-inner mt--2">
+            <div class="row">
+            <div class="col-md-12 col-lg-12">
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-hover">
+                        <div class="box bg-secondary text-center">
+                            <h1 class="font-light text-white">3</h1>
+                            <h6 class="text-white">Completed Tasks</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white">2</h1>
+                            <h6 class="text-white">Overdue Tasks</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-hover">
+                        <div class="box bg-dark text-center">
+                            <h1 class="font-light text-white">3</h1>
+                            <h6 class="text-white">Ongoing Tasks</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="card card-hover">
+                        <div class="box bg-primary2 text-center">
+                            <h1 class="font-light text-white">&#8358;341,800</h1>
+                            <h6 class="text-white">Total Earning</h6>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="card-head-row">
+                                <div class="card-title">
+                                    PROJECT OVERVIEW <h6 class="text-muted text-uppercase">3 ongoing projects</h6>
+                                </div>
+                                <div class="card-tools">
+                                            <div class="form-group form-group-default required">
+                                                <label for="search-tasks" class="control-label">Search by task name</label>
+                                                <input type="text" class="form-control" required name="search-tasks" id="search-tasks">
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="">
+                                    <thead>
+                                    <tr class="no-border">
+                                        <th style="width:40%">Project Title</th>
+                                        <th style="width:20%">Next Update</th>
+                                        <th style="width:20%">Deadline</th>
+                                        <th style="width:20%">Project Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="v-align-middle">
+                                            <p class="font-weight-bold"><a href="projectDetail.html">
+                                                Enter and sort data in CTH 1 document format.</a></p>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="semi-bold">3 Hours</p>
+                                            <a href="javascript:void(0);"><h6 class="text-info text-uppercase fs-13">send update to client</h6></a>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="semi-bold">09.Feb.2019</p>
+                                            <h6 class="text-muted text-uppercase fs-13">in 3 weeks</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p><i class="fa fa-circle-o u-color-secondary u-mr-xsmall"></i>&nbsp;&nbsp;Ongoing</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="v-align-middle">
+                                            <p class="font-weight-bold">Transcribe podcast</p>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="semi-bold">None</p>
+                                            <h6 class="text-muted text-uppercase fs-13">no update required</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="semi-bold">02.Feb.2019</p>
+                                            <h6 class="text-muted text-uppercase fs-13">in 2 weeks</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p><i class="fa fa-circle-o u-color-success u-mr-xsmall"></i>&nbsp;&nbsp;Completed</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="v-align-middle ">
+                                            <p class="font-weight-bold">Powerpoint Slide</p>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="semi-bold">+18 Hours</p>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="semi-bold">02.Mar.2019</p>
+                                            <h6 class="text-muted text-uppercase fs-13">in 6 weeks</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p><i class="fa fa-circle-o u-color-info u-mr-xsmall"></i>&nbsp;&nbsp;Finishing Up</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!--<div class="col-md-4 col-lg-4 border-left">
+                <div class="col-12 mb-2">
+                        <div class="form-group form-group-default form-group-default-select2">
+                            <label class="subs" for="statusFilter">Filter By category</label>
+                            <select name="statusFilter" id="statusFilter" class="full-width" style="width: 100%;">
+                                <option value="">Select Category</option>
+                                <option value="30">Transcription</option>
+                                <option value="60">Data Entry</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="card m-b-10 border">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="card-title mb-0">PowerPoint Slide Presentation for Child Protection Summit</h6>
+                            </div>
+                            <div class="ml-auto">
+                                <select class="custom-select border-0 text-muted">
+                                    <option value="0" selected=""></option>
+                                    <option value="1">Last Month</option>
+                                    <option value="2">Last 3 Months</option>
+                                    <option value="3">This Year</option>
+                                    <option value="3">Last Year</option>
+                                </select>
+                            </div>--
+                        </div>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div class="d-flex flex-row">
+                            <div class="align-self-center">
+                                <div class="user-pic">
+                                    <a href="pro-dashboard.html">
+                                        <img alt="Profile Image" width="30" height="30" data-src-retina="assets/images/user-suggestion/2.jpg" src="assets/images/user-suggestion/2.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="m-l-10 align-self-center">
+                                <h6>BlueIntern Limited</h6>
+                                <h6 class="fs-13 text-muted">Lagos, Nigeria</h6>
+                            </div>
+                            <div class="ml-auto mt-0 p-t-0 align-self-center more-vert">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/more.svg"></a>
+                                <div class="dropdown-menu float-right">
+                                    <a class="dropdown-item" href="javascript:void(0)">Send Quote</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">Dismiss Task</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-b-10 border">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="card-title mb-0">Transcribe 40 minutes Podcasts to word document and PDF</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body bg-light">
+                        <div class="d-flex flex-row">
+                            <div class="align-self-center">
+                                <div class="user-pic">
+                                    <a href="pro-dashboard.html">
+                                        <img alt="Profile Image" width="30" height="30" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="m-l-10 align-self-center">
+                                <h6>Belvex Construction Limited</h6>
+                                <h6 class="fs-13 text-muted">Abuja, Nigeria</h6>
+                            </div>
+                            <div class="ml-auto mt-0 p-t-0 align-self-center more-vert">
+                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/more.svg"></a>
+                                <div class="dropdown-menu float-right">
+                                    <a class="dropdown-item" href="javascript:void(0)">Send Quote</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">Dismiss Task</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-b-10 border">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <h6 class="card-title mb-0">PowerPoint Slide Presentation for Child Protection Summit</h6>
+                            </div>
+                            <div class="ml-auto">
+                                <select class="custom-select border-0 text-muted">
+                                    <option value="0" selected=""></option>
+                                    <option value="1">Last Month</option>
+                                    <option value="2">Last 3 Months</option>
+                                    <option value="3">This Year</option>
+                                    <option value="3">Last Year</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>-->
+            </div>
+            <!---floating button---->
+            <div id="newTasks">
+                 <button class="taskRipple" data-target="#shareResume" data-toggle="modal" style="cursor: pointer;"><i class="icon-energy"></i></button>
+            </div>
+            <!--en floating button--->
+        </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade fill-in show" id="shareResume" tabindex="-1" role="dialog" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">SHARE YOUR E-RESUME</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 text-left" style="background-color: pink">
+                        hello
+                    </div>
+                    <div class="col-md-8 col-lg-8 text-right" style="background-color: green">
+                        whatsup with ya
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(function(){
+        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
+            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="radio"]').prop("checked", true);
+
+        });
+    });
+    $(document).ready(function() {
+        $('.full-width').select2();
+    });
+
+</script>
+</html>

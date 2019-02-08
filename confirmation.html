@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        .signup-row{
+            padding-bottom: 2em;
+        }
+        .container-2{
+            width: 60%;
+            margin: 0px auto;
+        }
+        .card {
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            -moz-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            border: 0;
+        }
+        @media (max-width:480px){
+            .container-2{
+                width: 95%;
+                margin:0px auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+<!-- ***** Header Area Start ***** -->
+<header id="step-delegate" class="header-area position-fixed">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav v-align-middle">
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav text-center">
+                        <li class="float-left">
+                            <a href="green-index.html">
+                                <i class="icon-arrow-left fs-16"></i>
+                            </a>
+                        </li>
+                        <li><a href="delegate-step-1.html">Select Category</a></li>
+                        <li>
+                            <a href="delegate-step-2.html">Describe Tasks</a>
+                        </li>
+                        <li><a href="delegate-step-3.html">Tasks Details</a></li>
+                        <li>
+                            <a href="javascript:void(0);" style="color: #fb6332;" class="semi-bold">Expertise &amp; Payment</a>
+                        </li>
+                    </ul>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="section">
+    <div class="container-2 margin-top-30">
+        <div class="row">
+            <!--<div class="col-lg-7 col-md-7 col-sm-12">
+                <h4>Almost Done...</h4>
+                <br/>
+                <span>Just one more step to go and you are done. Log in or create an account to publish your tasks to pros who will send
+                    your their bids and profiles for you to review. Please take note of the following</span>
+                <br/>
+                <br/>
+                <ul class="nb">
+                    <li>
+                        <p><img src="assets/images/checkbox.svg">&nbsp;All service payment must be made through the CloudHire platform. Upon agreement of rate by you and your service pro,
+                            a payment link will be generated for you to pay securely online</p>
+                    </li>
+                    <br/>
+                    <li>
+                        <p><img src="assets/images/checkbox.svg">&nbsp;Our pros are familiar with communication channels like Skype and Slack. </p>
+                    </li>
+                    <br/>
+                    <li>
+                        <p><img src="assets/images/checkbox.svg">&nbsp;Your project will be supervised by a team lead who will ensure that you get more than your expectations</p>
+                    </li>
+                </ul>
+                </div>-->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <div class="card-head-row">
+                            <div class="card-title">
+                                <h6 class="text-muted text-uppercase semi-bold p-b-10">SIGNUP FOR AN ACCOUNT
+                                    <a href="javascript:void(0);" data-target="#loginModals" data-toggle="modal">
+                                        <span class="float-right fs-12 text-orange semi-bold">Login Instead</span>
+                                    </a>
+                                </h6>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <!--fullname and lastname--->
+                            <div class="row">
+                                <div class="form-group form-group-default required">
+                                    <label for="firstname" class="control-label">Firstname</label>
+                                    <input type="text" class="form-control" required name="firstname" id="firstname">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group form-group-default required">
+                                    <label for="lastname" class="control-label">Lastname</label>
+                                    <input type="text" class="form-control" required name="lastname" id="lastname">
+                                </div>
+                            </div>
+                            <!--password and email address-->
+                            <div class="row">
+                                <div class="form-group form-group-default required">
+                                    <label for="mail" class="control-label">Email Address</label>
+                                    <input type="email" class="form-control" required name="mail" id="mail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group form-group-default required">
+                                    <label for="password" class="control-label">Password</label>
+                                    <input type="password" class="form-control" required name="password" id="password">
+                                </div>
+                            </div>
+                            <!--action button-->
+                            <div class="row float-right">
+                                <a  href="suggestions.html" class="btn btn-secondary btn-lg continue" style="line-height: 30px">Register Account</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!---login modal--->
+<div class="modal fade" id="loginModals" tabindex="-1" role="dialog" aria-hidden="true" style="border: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg" style="background-image: url(assets/images/head-image.jpg);background-size: cover; background-position: center;border: none;color: #000;">
+                <h5 class="modal-title">Welcome Back<br/>
+                <span class="fs-15">Login to your dashboard to continue and access all your past and present projects and tasks</span></h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group form-group-default required">
+                        <label for="loginMail" class="control-label">Email Address</label>
+                        <input type="email" class="form-control" required name="loginMail" id="loginMail">
+                    </div>
+                    <div class="form-group form-group-default required">
+                        <label for="loginPassword" class="control-label">Password</label>
+                        <input type="password" class="form-control" required name="loginPassword" id="loginPassword">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="client-dashboard.html" class="btn btn-primary btn-lg btn-block semi-bold">PROCEED TO LOGIN</a>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--end login modal-->
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(function(){
+        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
+            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="radio"]').prop("checked", true);
+
+        });
+    });
+</script>
+</html>

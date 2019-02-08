@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/switch.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        #send svg:hover {
+            fill: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+        }
+        .text-orange{
+            color: #fb6332;
+        }
+        .text-orange:hover{
+            color: #e54716;
+        }
+        /*.card .card-body {
+            padding: 0.5rem 1.5rem;
+        }*/
+        .accordion .card{
+            margin-bottom: 10px;
+        }
+
+        .copy-url {
+            display: flex
+        }
+
+        .copy-url .copy-url-button {
+            min-width: 58px;
+            background-color: #fb6332;
+            color: #fff;
+            border-radius: 0 4px 4px 0
+        }
+        .snackbar-container {
+            transition: all 500ms ease;
+            transition-property: top, right, bottom, left, opacity;
+            font-size: 16px;
+            min-height: 14px;
+            background-color: #404040;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            line-height: 22px;
+            padding: 18px 24px;
+            bottom: -100px;
+            top: -100px;
+            opacity: 0;
+            z-index: 9999;
+            cursor: default;
+            border-radius: 4px;
+            font-weight: 500
+        }
+
+        .snackbar-container .action {
+            background: inherit;
+            display: inline-block;
+            border: none;
+            font-size: inherit;
+            text-transform: uppercase;
+            color: #aaa;
+            margin: 0 0 0 24px;
+            padding: 0;
+            min-width: min-content;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px
+        }
+
+        @media(min-width:640px) {
+            .snackbar-container {
+                display: inline-flex;
+                margin: 24px
+            }
+        }
+
+        .snackbar-pos.bottom-center {
+            top: auto!important;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0)
+        }
+
+        .snackbar-pos.bottom-left {
+            top: auto!important;
+            bottom: 0;
+            left: 0
+        }
+
+        .snackbar-pos.bottom-right {
+            top: auto!important;
+            bottom: 0;
+            right: 0
+        }
+
+        .snackbar-pos.top-left {
+            bottom: auto!important;
+            top: 0;
+            left: 0
+        }
+
+        .snackbar-pos.top-center {
+            bottom: auto!important;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0)
+        }
+
+        .snackbar-pos.top-right {
+            bottom: auto!important;
+            top: 0;
+            right: 0
+        }
+
+        @media(max-width:640px) {
+            .snackbar-container {
+                left: 0;
+                right: 0;
+                width: 100%;
+                border-radius: 0
+            }
+            .snackbar-pos.bottom-center,
+            .snackbar-pos.top-center {
+                left: 0;
+                transform: none
+            }
+        }
+        .status-switch{background-color:#eee;width:100%;display:block;border-radius:4px;height:36px;padding:0;position:relative;zoom:1;margin-top:20px}.status-switch:before,.status-switch:after{content:" ";display:table}.status-switch label{float:left;width:50%;position:relative;z-index:2;line-height:36px;cursor:pointer;color:#888;font-size:14.7px;text-align:center;transition:.3s;margin:0}.status-switch span.status-indicator{position:relative;z-index:1;top:0;left:0;width:50%;height:100%;display:block;border-radius:4px 0 0 4px;background-color:#38b653;box-shadow:0 0 5px 1px rgba(56,182,83,.3);transition:all .4s cubic-bezier(.3,-.41,.19,1.3),background-color .2s linear}.status-switch span.right{left:50%;border-radius:0 4px 4px 0;background-color:#333;box-shadow:none;color:#fff}.status-switch label.current-status{color:#fff}
+        .user-status {
+            padding: 3px 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="orange">
+            <a href="index.html" class="logo ml-auto mr-auto">
+                <img src="" alt="clictask" class="navbar-brand">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+            <div class="container-fluid">
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <div class="avatar-sm">
+                                <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-user animated fadeIn">
+                            <div class="dropdown-user-scroll scrollbar-outer" >
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="u-text">
+                                            <h4 class="fs-16">Hizrian</h4>
+                                            <p class="text-muted fs-14">hello@themekita.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="user-status">
+                                <div class="status-switch" id="snackbar-user-status">
+                                    <label class="user-online current-status">Online</label>
+                                    <label class="user-invisible">Invisible</label>
+                                    <!-- Status Indicator -->
+                                    <span class="status-indicator" aria-hidden="true"></span>
+                                </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="fa fa-th"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item">
+                        <a href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-energy"></i>
+                            <p>Task History</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="javascript:void(0);">
+                            <i class="icon-docs"></i>
+                            <p>E-Resume</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro-profile.html">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content content-full">
+            <div class="page-navs bg-white">
+                <div class="nav-scroller">
+                    <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" id="myTab">
+                        <a class="nav-link active show" data-toggle="tab" id="nav-tab1-tab" role="tab" href="#tab1">Resume</a>
+                        <div class="ml-auto">
+                            <a href="javascript:void(0)" class="v-align-middle btn semi-bold bg-success text-white" data-target="#AddSection" data-toggle="modal">
+                                <i class="icon-plus semi-bold"></i>&nbsp;&nbsp;&nbsp;Add Section</a>
+                            <a class="v-align-middle btn semi-bold" href="javascript:void(0)" data-target="#shareResume" data-toggle="modal">
+                                <i class="icon-share semi-bold"></i> &nbsp;&nbsp;&nbsp;Share Resume</a>
+                            <a href="javascript:void(0)" class="v-align-middle btn semi-bold">
+                                <i class="icon-cloud-download semi-bold"></i>&nbsp;&nbsp;&nbsp;Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-inner">
+                        <!-- START BREADCRUMB -->
+                        <ol class="breadcrumb m-b-30">
+                            <li class="breadcrumb-item"><a href="pro-dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active text-truncate">E-Resume</li>
+                        </ol>
+                        <!-- END BREADCRUMB -->
+                        <div class="row">
+                            <div class="col-md-9 col-lg-9 col-sm-7">
+                                <!---resume expereince section-->
+                                <div id="exp-1" class="accordion" role="tablist" aria-multiselectable="true">
+                                    <!--resume clictask project--->
+                                    <div class="card m-t-5">
+                                        <div class="card-header" role="tab" id="headingTwo">
+                                            <div class="card-head-row">
+                                                <div class="card-title">
+                                                    <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-2" href="#data-2" aria-expanded="true" aria-controls="dataTwo"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;CLICTASK PROJECT</h6>
+                                                </div>
+                                                <div class="card-tools">
+                                                    <a href="javascript:void(0);"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="data-2" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="card-body">
+                                                <h6 class="text-muted p-b-10 fs-12">May 2018</h6>
+                                                <h6 class="p-b-20">Data entry into the CTH1 system format</h6>
+                                                <p class="p-b-20 text-truncate">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
+                                                    the master-builder of human happiness. <a href="javascript:void(0);" class="text-orange semi-bold float-right fs-13">READ MORE</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---section ends-->
+                                    <div class="card m-t-5">
+                                        <div class="card-header" role="tab" id="headingOne">
+                                            <div class="card-head-row">
+                                                <div class="card-title">
+                                                    <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#data-1" aria-expanded="true" aria-controls="dataOne"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;EXPERIENCE</h6>
+                                                </div>
+                                                <div class="card-tools">
+                                                    <a href="javascript:void(0);"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="data-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-body">
+                                            <h6 class="text-muted p-b-10 fs-12 w-100">Jan 2016 - May 2018
+                                             <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="icon-options-vertical"></i></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Entry</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                </div>
+                                            </h6>
+                                            <h6 class="p-b-20">Lead Designer, Asthetics Components
+                                            </h6>
+                                            <p class="p-b-20 text-truncate">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
+                                                the master-builder of human happiness. <a href="javascript:void(0);" class="text-orange semi-bold float-right fs-13">READ MORE</a>
+                                            </p>
+                                            <hr class="">
+                                            <h6 class="text-muted p-b-10 fs-12 w-100">Jan 2015 - Mar 2016
+                                                <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="icon-options-vertical"></i></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Entry</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                </div>
+                                            </h6>
+                                            <h6 class="p-b-20">Project Cordinator, Nirrumburg Limited</h6>
+                                            <p class="p-b-20 text-truncate">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,
+                                                the master-builder of human happiness. <a href="javascript:void(0);" class="text-orange semi-bold float-right fs-13">READ MORE</a>
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <!---section ends--->
+                                    <!--resume references start--->
+                                    <div class="card m-t-5">
+                                            <div class="card-header" role="tab" id="headingRef">
+                                                <div class="card-head-row">
+                                                    <div class="card-title">
+                                                        <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#expRef" href="#dataRef" aria-expanded="true" aria-controls="dataRef"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;REFERENCE</h6>
+                                                    </div>
+                                                    <div class="card-tools">
+                                                        <a href="javascript:void(0);"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="dataRef" class="collapse" role="tabpanel" aria-labelledby="headingRef">
+                                                <div class="card-body">
+                                                    <h5 class="p-b-10">Mr Ubong Abasite</h5>
+                                                    <h6 class="p-b-10">Managing Director, Genesis Cinema</h6>
+                                                    <p class="p-b-20 text-truncate">ubong.a@genesisgroup.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     <!---section ends-->
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-lg-3 col-sm-5">
+                                <div class="row v-align-middle justify-content-start">
+                                    <div class="col-md-10 align-self-center">
+                                        <h6 class="text-muted">Automatically adds your completed tasks to my e-resume</h6>
+                                    </div>
+                                    <div class="col-md-2 float-left">
+                                        <input type="checkbox" data-init-plugin="switchery" class="switchery pull-right" checked="checked" />
+                                    </div>
+                                </div>
+                                <hr class="">
+                                <div class="row v-align-middle justify-content-start">
+                                    <div class="col-md-10 align-self-center">
+                                        <h6 class="text-muted">Automatically attach my e-resume to tasks/project bids</h6>
+                                    </div>
+                                    <div class="col-md-2 float-left">
+                                        <input type="checkbox" data-init-plugin="switchery" class="switchery pull-right" checked="checked" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----add section modal--->
+<div class="modal fade" id="AddSection" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">ADD RESUME SECTION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="section-name" class="control-label">section name e.g. hobbies</label>
+                            <input type="text" class="form-control" required name="section-name" id="section-name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default form-group-default-select2">
+                            <label class="subs" for="selectType">Select type</label>
+                            <select name="selectType" id="selectType" class="full-width" style="width: 100%;">
+                                <option value="">Section Header</option>
+                                <option value="">Document Upload</option>
+                                <option value="">References</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">UPDATE SECTIONS</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--share resume modal--->
+<div class="modal fade" id="shareResume" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">SHARE YOUR E-RESUME</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="form-group form-group-default input-group">
+                            <div class="copy-url">
+                            <div class="form-input-group">
+                                <label>RESUME URL</label>
+                                <input type="text" id="copy-url" class="form-control">
+                            </div>
+                            <div class="input-group-append">
+                            <span class="input-group-text copy-url-button float-right" data-clipboard-target="#copy-url" title="Copy to Clipboard" data-tippy-placement="top">
+                                <i class="icon-docs semi-bold"></i>
+                            </span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/switch.js"></script>
+<script src="assets/js/essentials.js"></script>
+<script>
+    $(function(){
+        $('a[data-action="collapse"]').on("click",function(e){e.preventDefault(),$(this).closest(".card").find('[data-action="collapse"] i').toggleClass("ti-minus ti-plus"),$(this).closest(".card").children(".card-body").collapse("toggle")})
+
+    });
+    $(document).ready(function() {
+        $('.full-width').select2();
+    });
+    //var elem = document.querySelector('.switchery');
+    //var init = new Switchery(elem, { size: 'small',color: '#fb6332', jackColor: '#fff' });
+    (function($) {
+        if ($('.status-switch label.user-invisible').hasClass('current-status')) {
+            $('.status-indicator').addClass('right');
+        }
+        $('.status-switch label.user-invisible').on('click', function () {
+            $('.status-indicator').addClass('right');
+            $('.status-switch label').removeClass('current-status');
+            $('.user-invisible').addClass('current-status');
+        });
+        $('.status-switch label.user-online').on('click', function () {
+            $('.status-indicator').removeClass('right');
+            $('.status-switch label').removeClass('current-status');
+            $('.user-online').addClass('current-status');
+        });
+    });
+    var elems = Array.prototype.slice.call(document.querySelectorAll('.switchery'));
+    elems.forEach(function(html) {
+        var switchery = new Switchery(html, { size: 'small',color: '#fb6332', jackColor: '#fff' });
+    });
+    $('.copy-url input').val(window.location.href);new ClipboardJS('.copy-url-button');
+    // Snackbar for user status switcher
+    $('#snackbar-user-status label').click(function() {
+        Snackbar.show({
+            text: 'Your status has been changed!',
+            pos: 'bottom-right',
+            showAction: true,
+            actionText: "Dismiss",
+            duration: 3000,
+            textColor: '#fff',
+            backgroundColor: '#000'
+        });
+    });
+
+    // Snackbar for "place a bid" button
+    $('#snackbar-place-bid').click(function() {
+        Snackbar.show({
+            text: 'Your bid has been placed!',
+        });
+    });
+
+
+    // Snackbar for copy to clipboard button
+    $('.copy-url-button').click(function() {
+        Snackbar.show({
+            text: 'Copied to clipboard!',
+            pos: 'bottom-right',
+            showAction: true,
+            actionText: "Dismiss",
+            duration: 6000,
+            textColor: '#fff',
+            backgroundColor: '#000'
+        });
+    });
+
+</script>
+</html>

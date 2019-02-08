@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/switch.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        #send svg:hover {
+            fill: #000;
+       }
+        .semi-bold{
+            font-weight: 700;
+        }
+
+        .label {
+            padding: 3px 10px;
+            line-height: 13px;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 2px;
+            font-size: 14px;
+        }
+        .label-success {
+            background-color: #36bea6;
+        }
+        .label-danger{
+            background-color: #f62d51;
+        }
+        .label-primary{
+            background-color: #7460ee;
+        }
+        .label-secondary{
+            background-color: #343a40;
+        }
+        .card-head-row{
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+    </div>
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="orange">
+            <a href="index.html" class="logo ml-auto mr-auto">
+                <img src="http://demo.themekita.com/demo-millenium/millenium/examples/assets/img/logo.svg" alt="navbar brand" class="navbar-brand" height="35">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+            <div class="container-fluid">
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <div class="avatar-sm">
+                                <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user animated fadeIn">
+                            <div class="dropdown-user-scroll scrollbar-outer">
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="u-text">
+                                            <h4 class="fs-16">Hizrian</h4>
+                                            <p class="text-muted fs-14">hello@themekita.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <a class="dropdown-item" href="#">My Balance</a>
+                                    <a class="dropdown-item" href="#">Inbox</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Account Setting</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="fa fa-th"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item active">
+                        <a href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="starter-template.html">
+                            <i class="icon-energy"></i>
+                            <p>Task History</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+                    </li>
+                    <li class="nav-item">
+                        <a href="e-resume.html">
+                            <i class="icon-docs"></i>
+                            <p>E-Resume</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro-profile.html">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content content-full">
+            <div class="page-navs bg-white">
+                <div class="nav-scroller">
+                    <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" id="myTab">
+                            <a class="nav-link active show" data-toggle="tab" id="nav-tab1-tab" role="tab" href="#tab1">Project Details</a>
+                            <div class="ml-auto">
+                                <a class="v-align-middle btn btn-primary semi-bold" href="javascript:void(0)" data-target="#updateStatus" data-toggle="modal">
+                                    &nbsp;&nbsp;&nbsp;Update Status</a>
+                                <a class="v-align-middle btn semi-bold" href="javascript:void(0)">
+                                    &nbsp;&nbsp;&nbsp;Send Update</a>
+                                <a href="javascript:void(0)" class="v-align-middle btn semi-bold">
+                                    &nbsp;&nbsp;&nbsp;Submit Report</a>
+                                <a class="v-align-middle btn semi-bold" href="javascript:void(0)">
+                                    &nbsp;&nbsp;&nbsp;Add to Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-inner">
+                    <div class="row">
+                            <div class="col-md-5">
+                                <!-- START BREADCRUMB -->
+                                <ol class="breadcrumb m-b-30">
+                                    <li class="breadcrumb-item"><a href="pro-dashboard.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active text-truncate">Enter an sort data in CTH1 document format</li>
+                                </ol>
+                                <!-- END BREADCRUMB -->
+                                <h6 class="text-muted p-b-10">PROJECT INFORMATION</h6>
+                                <h4 class="p-b-20">Data Entry using CTH1 document format</h4>
+                                <div class="row">
+                                    <div class="col-md-4 col-4">
+                                        <h6 class="text-muted p-b-10">COMPLETION DATE</h6>
+                                        <p class="p-b-20 font-weight-bold">02.02.2018</p>
+                                    </div>
+                                    <div class="col-md-4 col-4">
+                                        <h6 class="text-muted p-b-10">UPDATE FREQUENCY</h6>
+                                        <p class="p-b-20 font-weight-bold">Hourly</p>
+                                    </div>
+                                    <div class="col-md-4 col-4">
+                                        <h6 class="text-muted p-b-10">PROJECT STATUS</h6>
+                                        <p class="text-warning font-weight-bold">ONGOING</p>
+                                    </div>
+                                </div>
+                                <hr class="">
+                                <h6 class="text-muted p-b-10">TASK OVERVIEW</h6>
+                                <p class="p-b-20">Enter and sort data in CTH 1 document format Prepare a 10 slide presentation for the upcoming Child Protection summit in Doha.
+                                    The Slides should reflect the current state of the child
+                                </p>
+                                <hr class="">
+                                <h6 class="text-muted p-b-10">PROJECT OWNER</h6>
+                                <div class="row v-align-middle justify-content-start">
+                                    <div class="col-md-9 align-self-center">
+                                        <div class="user-pic">
+                                            <a href="pro-dashboard.html">
+                                                <img alt="Profile Image" width="30" height="30" style="border-radius: 30px" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="m-l-10 align-self-center">
+                                            <h6>Belvex Construction Limited</h6>
+                                            <h6 class="fs-13 text-muted">Abuja, Nigeria</h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div id="exp-1" class="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="card m-t-5">
+                                        <div class="card-header" role="tab" id="headingOne">
+                                            <div class="card-head-row">
+                                                <div class="card-title">
+                                                    <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#data-1" aria-expanded="true" aria-controls="dataOne"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;PROJECT TASKS</h6>
+                                                </div>
+                                                <div class="card-tools">
+                                                    <a href="javascript:void(0);" data-target="#modalSlideLeft" data-toggle="modal"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="data-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="card-body">
+                                                <div class="">
+                                                <h6 class="text-muted p-b-10 fs-12 w-100"><span class="label label-success">Completed</span> 10 mins ago
+                                                    <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon-options-vertical"></i></a>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Completed</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Entry</a>
+                                                        <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                    </div>
+                                                </h6>
+                                                <p class="p-b-20" style="text-decoration: line-through;">Call Matthew to request Johns number. After the call, contact Mary and set up an appointment</p>
+                                                </div>
+                                                <div class="">
+                                                    <h6 class="text-muted p-b-10 fs-12 w-100"><span class="label label-danger">pending</span> 18 mins ago
+                                                        <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="icon-options-vertical"></i></a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Mark as Completed</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Entry</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                        </div>
+                                                    </h6>
+                                                    <p class="p-b-20">Call Matthew to request Johns number. After the call, contact Mary and set up an appointment</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--milestone sections--->
+                                    <div class="card m-t-5">
+                                        <div class="card-header" role="tab" id="milestone">
+                                            <div class="card-head-row">
+                                                <div class="card-title">
+                                                    <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#milestone-card" aria-expanded="true" aria-controls="milestone-section"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;MILESTONE TRACKER</h6>
+                                                </div>
+                                                <div class="card-tools">
+                                                    <a href="javascript:void(0);" data-target="#milestoneTracker" data-toggle="modal"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="milestone-card" class="collapse show" role="tabpanel" aria-labelledby="milestone">
+                                            <div class="card-body">
+                                                <div class="">
+                                                    <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                        <span class="label label-primary">created by you</span>&nbsp;&nbsp;
+                                                        <span class="label label-success">Completed</span> 2days ago
+                                                        <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="icon-options-vertical"></i></a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Milestone Completed</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Milestone Entry</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                        </div>
+                                                    </h6>
+                                                    <p class="p-b-20" style="text-decoration: line-through;">
+                                                    Join the two tables together into one edited and functional table and then export them to PDF and excel as per client requirements
+                                                    </p>
+                                                </div>
+                                                <div class="">
+                                                    <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                        <span class="label label-secondary">created by John</span>&nbsp;&nbsp;
+                                                        <span class="label label-danger">pending</span> 3days ago
+                                                        <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="icon-options-vertical"></i></a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Mark as Completed</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Milestone Entry</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                        </div>
+                                                    </h6>
+                                                    <p class="p-b-20">Send the draft document for the first data entry that has been completed</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!----issue tracker section---->
+                                    <div class="card m-t-5">
+                                        <div class="card-header" role="tab" id="issue">
+                                            <div class="card-head-row">
+                                                <div class="card-title">
+                                                    <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#issue-card" aria-expanded="true" aria-controls="issue-section"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;ISSUE TRACKER</h6>
+                                                </div>
+                                                <div class="card-tools">
+                                                    <a href="javascript:void(0);" data-target="#issueTracker" data-toggle="modal"><i class="icon-plus" style="font-size: 30px;color: #fb6332;"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="issue-card" class="collapse show" role="tabpanel" aria-labelledby="issue">
+                                            <div class="card-body">
+                                                <div class="">
+                                                    <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                        <span class="label label-primary">created by you</span>&nbsp;&nbsp;
+                                                        <span class="label label-success">Resolved</span> 2days ago
+                                                        <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="icon-options-vertical"></i></a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Milestone Completed</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Milestone Entry</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                        </div>
+                                                    </h6>
+                                                    <p class="p-b-20" style="text-decoration: line-through;">
+                                                        Join the two tables together into one edited and functional table and then export them to PDF and excel as per client requirements
+                                                    </p>
+                                                </div>
+                                                <div class="">
+                                                    <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                        <span class="label label-secondary">created by John</span>&nbsp;&nbsp;
+                                                        <span class="label label-danger">pending</span> 3days ago
+                                                        <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <i class="icon-options-vertical"></i></a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Mark as Completed</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Milestone Entry</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                        </div>
+                                                    </h6>
+                                                    <p class="p-b-20">Send the draft document for the first data entry that has been completed</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row next-step d-none" style="position: fixed;bottom: 0px;width: 100%;background-color: #fff;min-height: 60px;line-height: 55px;">
+                        <div class="containers">
+                            <div class="d-flex flex-row v-align-middle">
+                                <div class="align-self-center">
+                                    <div class="user-pic">
+                                        <a href="pro-dashboard.html">
+                                            <img alt="Profile Image" width="30" height="30" style="border-radius: 30px" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="m-l-10 align-self-center">
+                                    <h6>Belvex Construction Limited</h6>
+                                    <h6 class="fs-13 text-muted">Abuja, Nigeria</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--modal to create note-->
+<div class="modal fade slide-right" id="modalSlideLeft" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">CREATE PROJECT NOTE<br/>
+                    <span class="text-truncate fs-14">Create project note and add email reminder</span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="form-group form-group-default required">
+                                        <label for="note-name" class="control-label">Note Title</label>
+                                        <input type="text" class="form-control" required name="note-name" id="note-name">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group form-group-default required">
+                                        <label for="note-details" class="control-label">Note Description</label>
+                                        <textarea rows="4" class="form-control" required name="note-details" id="note-details" style="min-height: 100px"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row col-middle v-align-middle p-t-10">
+                                    <div class="col-10"><h6 class="text-muted text-uppercase fs-14 float-left">Set a reminder with this note</h6></div>
+                                    <div class="col-2">
+                                        <input type="checkbox" data-init-plugin="switchery" class="switchery pull-right" checked="checked" /></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">SAVE NOTE</button>
+                        </div>
+            </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!--modal to add a issue to a task--->
+<div class="modal fade slide-right" id="milestoneTracker" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">CREATE MILESTONE<br/>
+                    <span class="text-truncate fs-14">Milestones helps you track major activities</span></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="milestoneName" class="control-label">Milestone Title</label>
+                            <input type="text" class="form-control" required name="milestoneName" id="milestoneName">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="milestonedetails" class="control-label">Milestone Description</label>
+                            <textarea rows="4" class="form-control" required name="milestonedetails" id="milestonedetails" style="min-height: 100px"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">SAVE MILESTONE</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!---modal to update project status--->
+<div class="modal fade" id="updateStatus" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-custom">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">UPDATE PROJECT STATUS</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="form-group form-group-default form-group-default-select2">
+                            <label class="subs" for="selectType">Select type</label>
+                            <select name="selectType" id="selectType" class="full-width" style="width: 100%;">
+                                <option value="">Ongoing</option>
+                                <option value="">Completed</option>
+                                <option value="">Finishing Up</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">UPDATE STATUS</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/switch.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(function(){
+        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
+            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="radio"]').prop("checked", true);
+
+        });
+    });
+    $(document).ready(function() {
+        $('.full-width').select2();
+    });
+    var elem = document.querySelector('.switchery');
+    var init = new Switchery(elem, { size: 'small',color: '#fb6332', jackColor: '#fff' });
+    $('.tasks-header-toggler').on('click', function () {
+        $(this).closest('.tasks-section').find('.tasks-list-w').slideToggle();
+        return false;
+    });
+</script>
+</html>
+<form>
+    <select class="selectpicker language-switcher form-control" data-selected-text-format="count" data-size="5">
+        <option selected>English</option>
+        <option>Français</option>
+        <option>Español</option>
+        <option>Deutsch</option>
+    </select>
+</form>

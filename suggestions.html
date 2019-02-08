@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CloudHire - hire reliable remote assistants for your business</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content=""/>
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+	<!-- Bootstrap & Plugins CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Custom CSS -->
+	<link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+	<link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+
+	<style>
+		body,html{
+			background-color: #fff;
+			color: #000;
+		}
+		.nb img{
+			width: 15px;
+			height: 15px;
+		}
+		.signup-row{
+			padding-bottom: 2em;
+		}
+		.page-navs .nav .nav-item {
+			padding: 1rem!important;
+		}
+		.nav.nav-line.nav-color-secondary .nav-item.active {
+			color: #716aca;
+			border-color: #716aca;
+		}
+		.nav.nav-line .nav-item {
+			padding: 15px 20px;
+			color: #575962;
+			font-size: 14px;
+			font-weight: 600;
+		}
+		.nav.nav-line .nav-item.active {
+			border-width: 0;
+			background-color: transparent;
+			color: #177dff;
+			border-bottom: 4px solid #177dff;
+			border-radius: 0;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div class="wrapper compact-wrapper">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+    </div>
+	<div class="main-header">
+		<!-- Logo Header -->
+		<div class="logo-header" data-background-color="orange">
+			<a href="index.html" class="logo ml-auto mr-auto">
+				<img src="" alt="clictask" class="navbar-brand">
+			</a>
+			<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+			</button>
+			<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+		</div>
+		<!-- End Logo Header -->
+
+		<!-- Navbar Header -->
+		<nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+			<div class="container-fluid">
+				<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+					<li class="nav-item dropdown hidden-caret">
+						<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+							<div class="avatar-sm">
+								<img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+							</div>
+						</a>
+
+						<ul class="dropdown-menu dropdown-user animated fadeIn">
+							<div class="dropdown-user-scroll scrollbar-outer" >
+								<li>
+									<div class="user-box">
+										<div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+										<div class="u-text">
+											<h4 class="fs-16">Hizrian</h4>
+											<p class="text-muted fs-14">hello@themekita.com</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">My Profile</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" href="#">Logout</a>
+								</li>
+							</div>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link quick-sidebar-toggler">
+							<i class="fa fa-th"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- End Navbar -->
+	</div>
+	<div class="sidebar">
+		<div class="sidebar-wrapper scrollbar scrollbar-inner">
+			<div class="sidebar-content">
+				<ul class="nav nav-success">
+					<li class="nav-item active">
+						<a href="pro-dashboard.html">
+							<i class="icon-home"></i>
+							<p>Work Bench</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="starter-template.html">
+							<i class="icon-star"></i>
+							<p>Hired Professionals</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="starter-template.html">
+							<i class="icon-docs"></i>
+							<p>Reports &amp; Timesheets</p>
+						</a>
+					</li>
+					<li class="nav-section">
+								<span class="sidebar-mini-icon">
+									<i class="fa fa-ellipsis-h"></i>
+								</span>
+						<h4 class="text-section">ACCOUNT MANAGEMENT</h4>
+					</li>
+					<li class="nav-item">
+						<a href="pro-profile.html">
+							<i class="icon-emotsmile"></i>
+							<p>Profile</p>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="invoice.html">
+							<i class="icon-settings"></i>
+							<p>Settings</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-panel">
+		<div class="content content-full">
+            <div class="page-navs bg-white">
+                <div class="nav-scroller">
+                    <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" role="tablist" id="myTab">
+								<a class="nav-item active" data-toggle="tab" role="tab" data-target="#tab1" href="#" >Quotes &amp; Profiles</a>
+								<a href="#" class="nav-item" data-toggle="tab" role="tab" data-target="#tab2">Project Detail</a>
+						<div class="ml-auto">
+                            <a class="modal-links v-align-middle btn btn-danger semi-bold" href="javascript:void(0)" data-target="#CancelProject" data-toggle="modal">
+                                <i class="icon-close semi-bold"></i> &nbsp;&nbsp;&nbsp;Cancel Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="page-inner">
+				<!-- START BREADCRUMB -->
+				<ol class="breadcrumb m-b-10">
+					<li class="breadcrumb-item"><a href="client-dashboard.html">Dashboard</a></li>
+					<li class="breadcrumb-item active text-truncate">Suggestions</li>
+				</ol>
+				<!-- END BREADCRUMB -->
+				<div class="tab-content">
+					<div class="tab-pane fadeIn active" id="tab1">
+					<div class="row">
+					<div class="col-md-12 col-lg-12 col-sm-7">
+						  <div class="row">
+							<!---begin suggested accounts--->
+							  	<div class="col-lg-3 col-md-3">
+										<!--<h6 class="p-b-10">FILTER RESULTS</h6>-->
+										<form>
+											<div class="row">
+												<div class="form-group form-group-default form-group-default-select2">
+													<label class="subs" for="proLocation">Location</label>
+													<select name="proLocation" id="proLocation" class="full-width" style="width: 100%;">
+														<option value="">Lagos</option>
+														<option value="">Lusaka</option>
+														<option value="">Johannesburg</option>
+													</select>
+												</div>
+											</div>
+											<div class="row">
+												<div class="form-group form-group-default required">
+													<input type="text" class="range-slider" value="" data-slider-currency="$" data-slider-min="10" data-slider-max="250" data-slider-step="5" data-slider-value="[10,250]">
+												</div>
+											</div>
+										</form>
+
+								</div>
+							    <div class="col-lg-3 col-md-3 col-sm-12">
+												<h6 class="p-b-10">8 PEOPLE HAVE SHOWN INTEREST IN YOUR TASK</h6>
+												<!---interest list-->
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="55" height="55" data-src-retina="assets/images/user-suggestion/2.jpg" src="assets/images/user-suggestion/2.jpg">
+													</div>
+													<h5>Nathaniel Hamilton</h5>
+													<h6 class="fs-13 text-muted">Top 45% earner on cloudhire</h6>
+												</div>
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/d3.jpg" src="assets/images/user-suggestion/d3.jpg">
+													</div>
+													<h5>Jerry Wang</h5>
+													<h6 class="fs-13 text-muted">Top 75% earner on cloudhire</h6>
+												</div>
+												<div class="card-header active-suggestion">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/6.jpg" src="assets/images/user-suggestion/6.jpg">
+													</div>
+													<h5>Bohemian Rhapsody</h5>
+													<h6 class="fs-13 text-muted">Top 45% earner on cloudhire</h6>
+												</div>
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/d3.jpg" src="assets/images/user-suggestion/d3.jpg">
+													</div>
+													<h5>Olajumoke Adebisi</h5>
+													<h6 class="fs-13 text-muted">Top 15% earner on cloudhire</h6>
+												</div>
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/5.jpg" src="assets/images/user-suggestion/5.jpg">
+													</div>
+													<h5>Thor, Mightest Avenger</h5>
+													<h6 class="fs-13 text-muted">Top 15% earner on cloudhire</h6>
+												</div>
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
+													</div>
+													<h5>Fatai Ibrahim Sule</h5>
+													<h6 class="fs-13 text-muted">Top 15% earner on cloudhire</h6>
+												</div>
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/5.jpg" src="assets/images/user-suggestion/5.jpg">
+													</div>
+													<h5>Chali Everisto</h5>
+													<h6 class="fs-13 text-muted">Top 5% earner on cloudhire</h6>
+												</div>
+												<div class="card-header">
+													<div class="user-pic">
+														<img alt="Profile Image" width="33" height="33" data-src-retina="assets/images/user-suggestion/3.jpg" src="assets/images/user-suggestion/3.jpg">
+													</div>
+													<h5>Joshua Jere</h5>
+													<h6 class="fs-13 text-muted">Business analyst,Google</h6>
+												</div>
+											</div>
+								<div class="col-lg-6 col-md-6 col-sm-12">
+												<!---selected profile information-->
+									<div class="card">
+												<div class="card-body border-bottom bg-light">
+													<div class="d-flex flex-row">
+														<div class="align-self-center">
+															<div class="user-pic-big">
+																<a href="pro-dashboard.html">
+																	<img alt="Profile Image" width="66" height="66" data-src-retina="assets/images/user-suggestion/2.jpg" src="assets/images/user-suggestion/2.jpg">
+																</a>
+															</div>
+														</div>
+														<div class="m-l-10 align-self-center">
+															<h5>Nathaniel Hamilton</h5>
+															<h6 class="fs-13 text-muted">Top 45% earner on cloudhire</h6>
+															<h6 class="fs-13 text-muted"><i class="icon-location-pin"></i>&nbsp;&nbsp;&nbsp;Lagos, Nigeria</h6>
+														</div>
+														<div class="ml-auto mt-0 p-t-0 align-self-center">
+															<button class="btn btn-primary btn-cons btn-lg">DELEGATE TASK</button>
+														</div>
+													</div>
+												</div>
+
+												<!--show the quote area--->
+												<div class="p-t-20 p-b-20 border-bottom text-center">
+													<div class="row">
+														<div class="col-4">
+														<h6 class="text-muted">QUOTED RATES</h6>
+														<p class="pb-20 font-weight-bold">&#8358;800/Hour</p>
+														</div>
+															<div class="col-4">
+															<h6 class="text-muted">COMPLETED POJECTS</h6>
+															<p class="pb-20 font-weight-bold">33</p>
+														</div>
+														<div class="col-4">
+															<h6 class="text-muted">LOCATION</h6>
+															<p class="pb-20 font-weight-bold">Nigeria</p>
+														</div>
+													</div>
+												</div>
+
+												<!--show tasks/resume tabs-->
+												<div class="card-borderless">
+													<ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-init-reponsive-tabs="dropdownfx">
+														<li class="nav-item">
+															<a class="active fs-15" data-toggle="tab" role="tab" data-target="#previoustasks" href="#" >Completed tasks</a>
+														</li>
+														<li class="nav-item">
+															<a href="#" class="fs-15" data-toggle="tab" role="tab" data-target="#tab2FollowUs">Resume</a>
+														</li>
+													</ul>
+													<div class="tab-content">
+														<div class="tab-pane active" id="previoustasks">
+															<div class="d-flex flex-row m-b-10">
+																<div class="m-l-10 align-self-center">
+																	<h6 class="text-muted">DATA ENTRY</h6>
+																	<p class="pb-20 font-weight-bold">Data entry into the CTH1 system format</p>
+																</div>
+																<div class="ml-auto text-right">
+																	<h5 class="rating-resume">5/5</h5>
+																</div>
+															</div>
+															<hr class="">
+															<div class="d-flex flex-row m-b-10">
+																<div class="m-l-10 align-self-center">
+																	<h6 class="text-muted">DATA ANALYSIS</h6>
+																	<p class="pb-20 font-weight-bold">Analyze data from market research from March 2017 to September 2018</p>
+																</div>
+																<div class="ml-auto text-right">
+																	<h5 class="rating-resume">5/5</h5>
+																</div>
+															</div>
+															<hr class="">
+															<div class="d-flex flex-row m-b-10">
+																<div class="m-l-10 align-self-center">
+																	<h6 class="text-muted">TRANSCRIPTION</h6>
+																	<p class="pb-20 font-weight-bold">Transcribe series of messages from 5 podcasts to genius.com
+																		each averaging 35minutes in duration. </p>
+																</div>
+																<div class="ml-auto text-right">
+																	<h5 class="rating-resume">5/5</h5>
+																</div>
+															</div>
+														</div>
+														<div class="tab-pane " id="tab2FollowUs">
+															<div class="row">
+																<div class="col-lg-12">
+																	<h3>“ Nothing is
+																		<span class="semi-bold">impossible</span>, the word itself says 'I'm
+																		<span class="semi-bold">possible</span>'! ”
+																	</h3>
+																	<p>A style represents visual customizations on top of a layout. By editing a style, you can use Squarespace's visual interface to customize your...</p>
+																	<br>
+																	<p class="pull-right">
+																		<button type="button" class="btn btn-default btn-cons">White</button>
+																		<button type="button" class="btn btn-success btn-cons">Success</button>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+								</div>
+						  </div>
+					</div>
+				</div>
+					</div>
+					<div class="tab-pane" id="tab2">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-sm-12">
+								<h6 class="text-muted p-b-10">PROJECT INFORMATION</h6>
+								<h4 class="p-b-20">Data Entry using CTH1 document format</h4>
+								<h6 class="text-muted p-b-10">TASK OVERVIEW</h6>
+								<p class="p-b-20">Enter and sort data in CTH 1 document format Prepare a 10 slide presentation for the upcoming Child Protection summit in Doha.
+									The Slides should reflect the current state of the child<br/><b style="color: #fb6332;font-size: 13px">READ MORE</b></p>
+								<h6 class="text-muted p-b-10">UPDATE FREQUENCY</h6>
+								<p class="p-b-20">Hourly</p>
+								<h6 class="text-muted p-b-10">PROJECT STARTS</h6>
+								<p>Immediately</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+<!----cancel project modal--->
+<div class="modal fade" id="CancelProject" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">CANCEL PROJECT<br/>
+                    <span class="fs-15">We are sad to hear that you wish to cancel your project. Tell us why so we can better serve you on your next project </span>
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="radio radio-success">
+                            <div class="p-b-20">
+                                <input type="radio" value="yes" name="optionyes" id="wrong-info">
+                                <label for="wrong-info" class="fs-14">I entered the wrong information</label>
+                            </div>
+                            <div class="p-b-20">
+                                <input type="radio" checked="checked" value="no" name="optionyes" id="no-ready">
+                                <label for="no-ready" class="fs-14">I am still ironing out the fine prints of my project/task</label>
+                            </div>
+                            <div class="p-b-20">
+                                <input type="radio" checked="checked" value="no" name="optionyes" id="requirements">
+                                <label for="requirements" class="fs-14">I did not find any pro that meets my requirements</label>
+                            </div>
+                            <div class="p-b-20">
+                                <input type="radio" checked="checked" value="no" name="optionyes" id="hood-check">
+                                <label for="hood-check" class="fs-14">I was just looking around. Will try Clictask again soon!</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group form-group-default required">
+                            <label for="cancelReason" class="control-label">Give detail of why you are canceling this project</label>
+                            <textarea class="form-control" required name="cancelReason" id="cancelReason" style="min-height: 100px;"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg btn-block semi-bold">CANCEL PROJECT</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/bootstrap-slider.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.full-width').select2();
+	});
+	function ThousandSeparator(nStr){nStr+='';var x=nStr.split('.');var x1=x[0];var x2=x.length>1?'.'+x[1]:'';var rgx=/(\d+)(\d{3})/;while(rgx.test(x1)){x1=x1.replace(rgx,'$1'+','+'$2');}
+		return x1+x2;}
+	var avgValue=(parseInt($('.bidding-slider').attr("data-slider-min"))+parseInt($('.bidding-slider').attr("data-slider-max")))/2;if($('.bidding-slider').data("slider-value")==='auto'){$('.bidding-slider').attr({'data-slider-value':avgValue});}
+	$('.bidding-slider').slider();$(".bidding-slider").on("slide",function(slideEvt){$("#biddingVal").text(ThousandSeparator(parseInt(slideEvt.value)));});$("#biddingVal").text(ThousandSeparator(parseInt($('.bidding-slider').val())));var currencyAttr=$(".range-slider").attr('data-slider-currency');$(".range-slider").slider({formatter:function(value){return currencyAttr+ThousandSeparator(parseInt(value[0]))+" - "+currencyAttr+ThousandSeparator(parseInt(value[1]));}});$(".range-slider-single").slider();
+</script>
+</html>

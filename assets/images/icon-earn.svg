@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 91">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #14ce6e;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="icon-earn" transform="translate(-19 -520)">
+    <circle id="Icon.BG" class="cls-1" cx="45.5" cy="45.5" r="45.5" transform="translate(19 520)"/>
+    <path id="ic_trending_up_24px" class="cls-2" d="M32.333,6,37.3,10.962,26.722,21.535l-8.667-8.667L2,28.945,5.055,32l13-13,8.667,8.667,13.65-13.628L45.333,19V6Z" transform="translate(41 549)"/>
+  </g>
+</svg>

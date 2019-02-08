@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+            color: #000;
+        }
+        .container-2{
+            width: 60%;
+            margin: 0px auto;
+        }
+        .card {
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            -moz-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            border: 0;
+        }
+        @media (max-width:480px){
+            .container-2{
+                width: 95%;
+                margin:0px auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+<!-- ***** Header Area Start ***** -->
+<header id="step-delegate" class="header-area position-fixed">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav v-align-middle">
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav text-center">
+                        <li class="float-left">
+                            <a href="index.html">
+                                <i class="icon-arrow-left fs-16"></i>
+                            </a>
+                        </li>
+                        <li><a href="delegate-step-1.html">Select Category</a></li>
+                        <li>
+                            <a href="delegate-step-2.html">Describe Tasks</a>
+                        </li>
+                        <li><a href="javascript:void(0);" style="color: #fb6332;" class="semi-bold">Tasks Details</a></li>
+                        <li>
+                            <a href="delegate-step-4.html">Expertise &amp; Payment</a>
+                        </li>
+                    </ul>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="section" id="forms">
+    <div class="container-2 margin-top-10">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <div class="card-head-row">
+                        <div class="card-title">
+                            <h6 class="text-muted text-uppercase semi-bold p-b-10">Expected Start Date</h6>
+                            <span>what date do you need your project to begin</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form>
+                    <div class="row form-group form-group-default">
+                        <label class="control-label" for="pickDate">WHEN DO YOU WANT TO INITIATE YOUR TASK/PROJECT</label>
+                        <input type="date" class="form-control" required name="pickDate" id="pickDate">
+                    </div>
+                            <div class="row form-group form-group-default required">
+                                <label for="describeTask" class="control-label">how often do you want your service pro to update you during project circle</label>
+                                <input type="text" class="form-control" required name="describeTask" id="describeTask">
+                            </div>
+                    </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <div class="card-head-row">
+                            <div class="card-title">
+                                <h6 class="text-muted text-uppercase semi-bold p-b-10">Estimated Project Duration</h6>
+                                <span>your estimated total will be calculated based on your duration of service</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="radio radio-success">
+                                <div class="p-b-20">
+                                    <input type="radio" value="yes" name="optionyes" id="day">
+                                    <label for="day" class="fs-14"><b>A DAY</b></label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="oneweek">
+                                    <label for="oneweek" class="fs-14"><b>A WEEK</b></label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="2weeks">
+                                    <label for="2weeks" class="fs-14"><b>2 WEEKS</b></label>
+                                </div>
+                                <div class="p-b-20">
+                                    <input type="radio" checked="checked" value="no" name="optionyes" id="4weeks">
+                                    <label for="4weeks" class="fs-14"><b>4 WEEKS</b></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row float-right">
+                    <a href="delegate-step-2.html" class="btn btn-secondary btn-lg previous semi-bold float-left" style="line-height: 30px">Previous - Describe Task</a>
+                    <a href="delegate-step-4.html" class="btn btn-secondary btn-lg continue semi-bold float-right" style="line-height: 30px">Next - Expertise &amp; Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(function(){
+        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
+            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="radio"]').prop("checked", true);
+
+        });
+    });
+</script>
+</html>

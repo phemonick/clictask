@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+        }
+        .semi-bold{
+            font-weight: 700;
+            color: #000;
+        }
+        .container-2{
+            width: 60%;
+            margin: 0px auto;
+        }
+        .card {
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 30px;
+            -webkit-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            -moz-box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+            border: 0;
+        }
+    </style>
+
+</head>
+<body>
+<!-- ***** Preloader Start ***** -->
+<div class="loader-wrapper">
+    <div class="loader">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+    </div>
+</div>
+<!-- ***** Preloader End ***** -->
+<!-- ***** Header Area Start ***** -->
+<header id="step-delegate" class="header-area position-fixed">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav v-align-middle">
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav text-center d-flex">
+                        <li class="float-left">
+                            <a href="index.html">
+                                <i class="icon-arrow-left fs-16"></i>
+                            </a>
+                        </li>
+                        <li><a href="delegate-step-1.html">Select Category</a></li>
+                        <li>
+                            <a href="javascript:void(0);"  style="color: #fb6332;" class="semi-bold">Describe Tasks</a>
+                        </li>
+                        <li><a href="delegate-step-3.html">Tasks Details</a></li>
+                        <li>
+                            <a href="delegate-step-4.html">Expertise &amp; Payment</a>
+                        </li>
+                    </ul>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<section class="section" id="forms">
+    <div class="container-2 margin-top-20">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-light">
+                        <div class="card-head-row">
+                            <div class="card-title">
+                                <h6 class="text-muted text-uppercase semi-bold p-b-10">Describe Tasks</h6>
+                                <span>To help you find the perfect match for your <b>Email Management tasks</b>, share some more information about tasks
+</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="margin-top-5">
+                                <div class="row">
+                                    <div class="form-group form-group-default required">
+                                        <label for="describeTask" class="control-label">Describe Your Task <span class="float-right">0/200 words</span></label>
+                                        <textarea class="form-control" required name="describeTask" id="describeTask" style="min-height: 150px"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group form-group-default required">
+                                        <label for="expectedResult" class="control-label">Describe Your Expected Result</label>
+                                        <textarea class="form-control" required name="expectedResult" style="min-height: 100px" id="expectedResult"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="row float-right">
+                    <a href="delegate-step-1.html" class="btn btn-secondary btn-lg previous semi-bold float-left" style="line-height: 30px">Previous - Categories</a>
+                    <a href="delegate-step-3.html" class="btn btn-secondary btn-lg continue semi-bold float-right" style="line-height: 30px">Next - Tasks Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    $(function(){
+        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
+            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
+            $(this).addClass('selected');
+            $(this).find('input[type="radio"]').prop("checked", true);
+
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fb6332;
+      }
+
+      .cls-2 {
+        fill: #fefefe;
+      }
+    </style>
+  </defs>
+  <g id="create-task" transform="translate(-1848 -145)">
+    <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-1" cx="20.5" cy="20.5" r="20.5" transform="translate(1848 145)"/>
+    <path id="ic_add_24px" class="cls-2" d="M23,15.286H15.286V23H12.714V15.286H5V12.714h7.714V5h2.571v7.714H23Z" transform="translate(1855 151)"/>
+  </g>
+</svg>
