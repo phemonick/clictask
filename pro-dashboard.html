@@ -23,7 +23,7 @@
         body,html{
             background-color: #fff;
             color: #000;
-
+            font-weight: 500;
         }
         .nb img{
             width: 15px;
@@ -35,43 +35,22 @@
         .table thead th {
             border-top: none;
         }
-        .dropdown-menu .dropdown-menu-grid
-        {
-            padding:0;
-            margin:0;
-            display:table;
-            table-layout:fixed;
-            width:100%;
-            white-space: nowrap;
-        }.dropdown-menu .dropdown-menu-grid .menu-grid-row{
-            display:table-row
-         }.dropdown-menu .dropdown-menu-grid .menu-grid-row>div{
-          display:table-cell;
-          vertical-align:middle;
-           text-align:center}
-        .dropdown-menu .dropdown-menu-grid .menu-grid-row>div a{
-            vertical-align:middle;
-            text-align:center;
-            padding:35px 5px
-        }.dropdown-menu .dropdown-menu-grid .menu-grid-row>div a i{
-           font-size:2rem;
-           text-align:center
-         }.dropdown-menu .dropdown-menu-grid .menu-grid-row>div a span{
-          display:block;
-          font-weight:400
-          }
             .taskRipple{
                 background-color: #fb6332;
                 color: #fff;
-                padding: 20px 18px;
+                padding: 18px 18px;
                 border-radius: 4px;
                 border: none;
                 font-size: 25px;
             }
             #newTasks{
                 position: fixed;
-                bottom: 20px;
+                bottom: 25px;
                 right: 20px;
+            }
+            #newTasks a{
+                color: #fff;
+                text-decoration: none;
             }
         .card-hover:hover{
             webkit-transform: translateY(-4px) scale(1.01);
@@ -91,53 +70,6 @@
         .box {
             border-radius: 2px;
             padding: 10px;
-        }
-        .modal.fade.fill-in {
-            background-color: rgba(255, 255, 255, 0);
-            -webkit-transition: background-color 0.3s;
-            transition: background-color 0.3s;
-            /*&.in{
-                          background-color: rgba(255, 255, 255, 0.85);
-                            .modal-dialog{
-                                opacity: 1;
-                              .scale(1);
-                          }
-                      }*/
-        }
-        .modal.fade.fill-in > .close {
-            opacity: 1;
-            z-index: 9999;
-        }
-        .modal.fade.fill-in > .close > i {
-            font-size: 16px;
-        }
-        .modal.fade.fill-in .modal-dialog {
-            /*display: table;*/
-            height: 100%;
-        }
-        .modal.fade.fill-in .modal-content {
-            /*display: table-cell;*/
-            /*vertical-align: middle;*/
-            border: 0;
-            background: transparent;
-        }
-        .modal.fade.fill-in .modal-content .modal-header {
-            border-bottom: 0px;
-        }
-        .modal.fade.fill-in.show {
-            background-color: rgba(255, 255, 255, 1);
-        }
-        .modal.fade.fill-in.show .modal-dialog {
-            opacity: 1;
-            -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-            transform: scale(1);
-        }
-        .modal.fade.fill-in .modal-dialog {
-            opacity: 0;
-            -webkit-transform: scale(0.6);
-            -ms-transform: scale(0.6);
-            transform: scale(0.6);
         }
          </style>
 
@@ -170,23 +102,6 @@
         <div class="container-fluid">
             <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
                 <li class="nav-item dropdown hidden-caret">
-                    <a class="nav-link" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-expanded="false">
-                        <i class="icon-grid"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right p-0">
-                        <div class="dropdown-menu-grid">
-                            <div class="menu-grid-row">
-                                <div><a class="dropdown-item  border-bottom border-right" href="apps.mail.html"><i class="icon-envelope-letter"></i><span>Sumbit Report</span></a></div>
-                                <div><a class="dropdown-item  border-bottom" href="apps.messages.html"><i class="icon dripicons-message"></i><span>Messages</span></a></div>
-                            </div>
-                            <div class="menu-grid-row">
-                                <div><a class="dropdown-item  border-right" href="apps.contacts.html"><i class="icon dripicons-archive"></i><span>Contacts</span></a></div>
-                                <div> <a class="dropdown-item" href="apps.calendar.html"><i class="icon dripicons-calendar"></i><span>Calendar</span></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="nav-item dropdown hidden-caret">
                     <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
                         <div class="avatar-sm">
                             <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
@@ -203,13 +118,17 @@
                                     </div>
                                 </div>
                             </li>
+                            <li class="user-status">
+                                <div class="status-switch" id="snackbar-user-status">
+                                    <label class="user-online current-status">Online</label>
+                                    <label class="user-invisible">Invisible</label>
+                                    <!-- Status Indicator -->
+                                    <span class="status-indicator" aria-hidden="true"></span>
+                                </div>
+                            </li>
                             <li>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">My Profile</a>
-                                <a class="dropdown-item" href="#">My Balance</a>
-                                <a class="dropdown-item" href="#">Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Account Setting</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Logout</a>
                             </li>
@@ -218,7 +137,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link quick-sidebar-toggler">
-                        <i class="fa fa-th"></i>
+                        <i class="icon-logout semi-bold"></i>
                     </a>
                 </li>
             </ul>
@@ -233,21 +152,15 @@
                 <ul class="nav nav-success">
                     <li class="nav-item active">
                         <a data-toggle="collapse" href="pro-dashboard.html">
-                            <i class="icon-home"></i>
-                            <p>Workspace</p>
+                            <i class="icon-home semi-bold"></i>
+                            <p>Dashboard</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="starter-template.html">
+                        <a href="project-history.html">
                             <i class="icon-energy"></i>
-                            <p>Worklist</p>
+                            <p>Project History</p>
                         </a>
-                    </li>
-                    <li class="nav-section">
-                                <span class="sidebar-mini-icon">
-                                    <i class="fa fa-ellipsis-h"></i>
-                                </span>
-                        <h4 class="text-section">ACCOUNT MANAGEMENT</h4>
                     </li>
                     <li class="nav-item">
                         <a href="e-resume.html">
@@ -267,6 +180,12 @@
                             <p>Settings</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);">
+                            <i class="icon-logout"></i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -274,17 +193,11 @@
     <!-- End Sidebar -->
     <div class="main-panel">
     <div class="content">
-       <!-- <div class="panel-header bg-danger-gradient">
-            <div class="page-inner pt-5 pb-5">
-                <h2 class="text-white pb-2">Welcome back Hizrian!</h2>
-                <h5 class="text-white op-7 mb-2">Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.</h5>
-            </div>
-        </div>-->
         <div class="page-inner mt--2">
             <div class="row">
             <div class="col-md-12 col-lg-12">
             <div class="row">
-                <div class="col-md-12 col-lg-12">
+                <div class="col-md-6 col-lg-12">
                 <div class="row">
                 <div class="col-sm-6 col-md-3">
                     <div class="card card-hover">
@@ -322,18 +235,12 @@
             </div>
             </div>
             <div class="row">
-                <div class="col-md-12 col-lg-12">
+                <div class="col-md-4 col-lg-4">
                     <div class="card">
                         <div class="card-header bg-light">
                             <div class="card-head-row">
-                                <div class="card-title">
-                                    PROJECT OVERVIEW <h6 class="text-muted text-uppercase">3 ongoing projects</h6>
-                                </div>
-                                <div class="card-tools">
-                                            <div class="form-group form-group-default required">
-                                                <label for="search-tasks" class="control-label">Search by task name</label>
-                                                <input type="text" class="form-control" required name="search-tasks" id="search-tasks">
-                                            </div>
+                                <div class="card-title semi-bold">
+                                    <h5 class="font-weight-bold">ONGOING PROJECTS <br/><span class="text-muted fs-14 text-uppercase">3 ongoing projects</span></h5>
                                 </div>
                             </div>
                         </div>
@@ -342,10 +249,58 @@
                                 <table class="table table-hover" id="">
                                     <thead>
                                     <tr class="no-border">
-                                        <th style="width:40%">Project Title</th>
-                                        <th style="width:20%">Next Update</th>
-                                        <th style="width:20%">Deadline</th>
-                                        <th style="width:20%">Project Status</th>
+                                        <th style="width:65%">Project Title</th>
+                                        <th style="width:35%">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="v-align-middle">
+                                            <p class="font-weight-bold"><a href="projectDetail.html">
+                                                Enter and sort data in CTH 1 document format.</a></p>
+                                            <h6 class="text-muted text-uppercase fs-13">09.Feb.2019</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="text-danger">Ongoing</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="v-align-middle">
+                                            <p class="font-weight-bold">Transcribe podcast</p>
+                                            <h6 class="text-muted text-uppercase fs-13">02.Feb.2019</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="text-success">Completed</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="v-align-middle ">
+                                            <p class="font-weight-bold">Powerpoint Slide</p>
+                                            <h6 class="text-muted text-uppercase fs-13">02.Mar.2019</h6>
+                                        </td>
+                                        <td class="v-align-middle">
+                                            <p class="text-warning">Finishing Up</p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!---upcoming projects starts-->
+                        <div class="card-header bg-light">
+                            <div class="card-head-row">
+                                <div class="card-title semi-bold">
+                                    <h5 class="font-weight-bold">UPCOMING PROJECTS <br/><span class="text-muted fs-14 text-uppercase">2 projects starting in 30 days</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="upcomingProjects">
+                                    <thead>
+                                    <tr class="no-border">
+                                        <th style="width:70%">Project Title</th>
+                                        <th style="width:30%">Start Date</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -355,15 +310,7 @@
                                                 Enter and sort data in CTH 1 document format.</a></p>
                                         </td>
                                         <td class="v-align-middle">
-                                            <p class="semi-bold">3 Hours</p>
-                                            <a href="javascript:void(0);"><h6 class="text-info text-uppercase fs-13">send update to client</h6></a>
-                                        </td>
-                                        <td class="v-align-middle">
                                             <p class="semi-bold">09.Feb.2019</p>
-                                            <h6 class="text-muted text-uppercase fs-13">in 3 weeks</h6>
-                                        </td>
-                                        <td class="v-align-middle">
-                                            <p><i class="fa fa-circle-o u-color-secondary u-mr-xsmall"></i>&nbsp;&nbsp;Ongoing</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -371,15 +318,7 @@
                                             <p class="font-weight-bold">Transcribe podcast</p>
                                         </td>
                                         <td class="v-align-middle">
-                                            <p class="semi-bold">None</p>
-                                            <h6 class="text-muted text-uppercase fs-13">no update required</h6>
-                                        </td>
-                                        <td class="v-align-middle">
                                             <p class="semi-bold">02.Feb.2019</p>
-                                            <h6 class="text-muted text-uppercase fs-13">in 2 weeks</h6>
-                                        </td>
-                                        <td class="v-align-middle">
-                                            <p><i class="fa fa-circle-o u-color-success u-mr-xsmall"></i>&nbsp;&nbsp;Completed</p>
                                         </td>
                                     </tr>
                                     <tr>
@@ -387,14 +326,7 @@
                                             <p class="font-weight-bold">Powerpoint Slide</p>
                                         </td>
                                         <td class="v-align-middle">
-                                            <p class="semi-bold">+18 Hours</p>
-                                        </td>
-                                        <td class="v-align-middle">
                                             <p class="semi-bold">02.Mar.2019</p>
-                                            <h6 class="text-muted text-uppercase fs-13">in 6 weeks</h6>
-                                        </td>
-                                        <td class="v-align-middle">
-                                            <p><i class="fa fa-circle-o u-color-info u-mr-xsmall"></i>&nbsp;&nbsp;Finishing Up</p>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -403,143 +335,151 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
-            <!--<div class="col-md-4 col-lg-4 border-left">
-                <div class="col-12 mb-2">
-                        <div class="form-group form-group-default form-group-default-select2">
-                            <label class="subs" for="statusFilter">Filter By category</label>
-                            <select name="statusFilter" id="statusFilter" class="full-width" style="width: 100%;">
-                                <option value="">Select Category</option>
-                                <option value="30">Transcription</option>
-                                <option value="60">Data Entry</option>
-                            </select>
-                        </div>
-                </div>
-                <div class="card m-b-10 border">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h6 class="card-title mb-0">PowerPoint Slide Presentation for Child Protection Summit</h6>
-                            </div>
-                            <div class="ml-auto">
-                                <select class="custom-select border-0 text-muted">
-                                    <option value="0" selected=""></option>
-                                    <option value="1">Last Month</option>
-                                    <option value="2">Last 3 Months</option>
-                                    <option value="3">This Year</option>
-                                    <option value="3">Last Year</option>
-                                </select>
-                            </div>--
-                        </div>
-                    </div>
-                    <div class="card-body bg-light">
-                        <div class="d-flex flex-row">
-                            <div class="align-self-center">
-                                <div class="user-pic">
-                                    <a href="pro-dashboard.html">
-                                        <img alt="Profile Image" width="30" height="30" data-src-retina="assets/images/user-suggestion/2.jpg" src="assets/images/user-suggestion/2.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="m-l-10 align-self-center">
-                                <h6>BlueIntern Limited</h6>
-                                <h6 class="fs-13 text-muted">Lagos, Nigeria</h6>
-                            </div>
-                            <div class="ml-auto mt-0 p-t-0 align-self-center more-vert">
-                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/more.svg"></a>
-                                <div class="dropdown-menu float-right">
-                                    <a class="dropdown-item" href="javascript:void(0)">Send Quote</a>
-                                    <a class="dropdown-item" href="javascript:void(0)">Dismiss Task</a>
+                <div class="col-md-5 col-lg-5">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="card-head-row">
+                                <div class="card-title semi-bold">
+                                    <h5 class="font-weight-bold">PENDING ACTIVITIES <br/><span class="text-muted fs-14 text-uppercase">7 pending activities</span></h5>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card m-b-10 border">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h6 class="card-title mb-0">Transcribe 40 minutes Podcasts to word document and PDF</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body bg-light">
-                        <div class="d-flex flex-row">
-                            <div class="align-self-center">
-                                <div class="user-pic">
-                                    <a href="pro-dashboard.html">
-                                        <img alt="Profile Image" width="30" height="30" data-src-retina="assets/images/user-suggestion/1-old.jpg" src="assets/images/user-suggestion/1-old.jpg">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="m-l-10 align-self-center">
-                                <h6>Belvex Construction Limited</h6>
-                                <h6 class="fs-13 text-muted">Abuja, Nigeria</h6>
-                            </div>
-                            <div class="ml-auto mt-0 p-t-0 align-self-center more-vert">
-                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/more.svg"></a>
-                                <div class="dropdown-menu float-right">
-                                    <a class="dropdown-item" href="javascript:void(0)">Send Quote</a>
-                                    <a class="dropdown-item" href="javascript:void(0)">Dismiss Task</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card m-b-10 border">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <div>
-                                <h6 class="card-title mb-0">PowerPoint Slide Presentation for Child Protection Summit</h6>
-                            </div>
-                            <div class="ml-auto">
-                                <select class="custom-select border-0 text-muted">
-                                    <option value="0" selected=""></option>
-                                    <option value="1">Last Month</option>
-                                    <option value="2">Last 3 Months</option>
-                                    <option value="3">This Year</option>
-                                    <option value="3">Last Year</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="card-body">
+                        <div id="exp-1" class="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="m-t-5">
+                                                            <div class="card-header" role="tab" id="headingOne">
+                                                                <div class="card-head-row">
+                                                                    <div class="card-title">
+                                                                        <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#data-1" aria-expanded="true" aria-controls="dataOne"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;PROJECT TASKS</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="data-1" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                                                <div class="card-body">
+                                                                    <div class="project-item border-bottom">
+                                                                        <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                                            <span>18 mins ago</span>
+                                                                            <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                <i class="icon-options-vertical"></i></a>
+                                                                            <div class="dropdown-menu">
+                                                                                <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Mark as Completed</a>
+                                                                                <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Entry</a>
+                                                                                <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                                            </div>
+                                                                        </h6>
+                                                                        <p class="p-b-20">Call Matthew to request Johns number. After the call, contact Mary and set up an appointment</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                             <!--milestone sections-->
+                             <div class="m-t-5">
+                                                            <div class="card-header" role="tab" id="milestone">
+                                                                <div class="card-head-row">
+                                                                    <div class="card-title">
+                                                                        <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#milestone-card" aria-expanded="true" aria-controls="milestone-section"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;MILESTONE TRACKER</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="milestone-card" class="collapse show" role="tabpanel" aria-labelledby="milestone">
+                                                                <div class="card-body">
+                                                                    <div class="">
+                                                                        <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                                            <span class="label label-secondary">created by John</span>&nbsp;&nbsp;3days ago
+                                                                            <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                <i class="icon-options-vertical"></i></a>
+                                                                            <div class="dropdown-menu">
+                                                                                <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Mark as Completed</a>
+                                                                                <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Milestone Entry</a>
+                                                                                <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                                            </div>
+                                                                        </h6>
+                                                                        <p class="p-b-20">Send the draft document for the first data entry that has been completed</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                            <!--issue tracker section-->
+                             <div class="m-t-5">
+                                                            <div class="card-header" role="tab" id="issue">
+                                                                <div class="card-head-row">
+                                                                    <div class="card-title">
+                                                                        <h6 class="text-muted text-uppercase semi-bold" data-toggle="collapse" data-parent="#exp-1" href="#issue-card" aria-expanded="true" aria-controls="issue-section"><i class="icon-arrow-down semi-bold"></i>&nbsp;&nbsp;&nbsp;ISSUE TRACKER</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="issue-card" class="collapse show" role="tabpanel" aria-labelledby="issue">
+                                                                <div class="card-body">
 
+                                                                        <div class="project-item">
+                                                                            <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                                                <span class="label label-secondary">created by John</span>&nbsp;&nbsp;3days ago
+                                                                                <a href="#!" class="dropdown-toggle flex-shrink-1 float-right text-muted" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                    <i class="icon-options-vertical"></i></a>
+                                                                                <div class="dropdown-menu">
+                                                                                    <a class="dropdown-item v-align-middle" href="javascript:void(0)"><i class="icon-check"></i>&nbsp;Mark as Completed</a>
+                                                                                    <a class="dropdown-item" href="javascript:void(0)"><i class="icon-pencil"></i>&nbsp;Edit Issue Entry</a>
+                                                                                    <a class="dropdown-item" href="javascript:void(0)"><i class="icon-trash"></i>&nbsp;Delete</a>
+                                                                                </div>
+                                                                            </h6>
+                                                                            <p class="p-b-20">Send the draft document for the first data entry that has been completed</p>
+                                                                        </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                           </div>
+                        </div>
+                    </div>
+                    <!---end collapse--->
                 </div>
-            </div>-->
+                <div class="col-md-3 col-lg-3">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="card-head-row">
+                                <div class="card-title semi-bold">
+                                    <h5 class="font-weight-bold">PERFORMANCE RATING
+                                        <br/>
+                                        <select class="custom-select border-0 text-muted">
+                                            <option value="0" selected="">August 2018</option>
+                                            <option value="1">Last Month</option>
+                                            <option value="2">Last 3 Months</option>
+                                            <option value="3">All Time</option>
+                                        </select>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <h6>Professionalism <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                            </div>
+                            <div class="p-t-15">
+                                <h6>Timely Delivery <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                            </div>
+                            <div class="p-t-15">
+                                <h6>Communication Skill <span class="badge badge-danger float-right fs-14" style="border-radius: 3px;">33%</span></h6>
+                            </div>
+                            <div class="p-t-15">
+                                <h6>Quality of Work <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">93%</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
             </div>
             <!---floating button---->
             <div id="newTasks">
-                 <button class="taskRipple" data-target="#shareResume" data-toggle="modal" style="cursor: pointer;"><i class="icon-energy"></i></button>
+                 <a class="taskRipple" href="new-projects.html" style="cursor: pointer;"><i class="icon-energy"></i></a>
             </div>
-            <!--en floating button--->
+            <!--end floating button--->
         </div>
         </div>
     </div>
-</div>
-<div class="modal fade fill-in show" id="shareResume" tabindex="-1" role="dialog" aria-hidden="true">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">SHARE YOUR E-RESUME</h5>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-4 col-lg-4 text-left" style="background-color: pink">
-                        hello
-                    </div>
-                    <div class="col-md-8 col-lg-8 text-right" style="background-color: green">
-                        whatsup with ya
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
 </div>
 </body>
+
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 
 <!-- Bootstrap -->
@@ -554,14 +494,6 @@
 <script src="assets/js/select-dropdown.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
-    $(function(){
-        $('div.category-chooser').not('.disabled').find('div.category-chooser-item').on('click', function(){
-            $(this).parent().parent().find('div.category-chooser-item').removeClass('selected');
-            $(this).addClass('selected');
-            $(this).find('input[type="radio"]').prop("checked", true);
-
-        });
-    });
     $(document).ready(function() {
         $('.full-width').select2();
     });

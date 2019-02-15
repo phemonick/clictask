@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CloudHire - hire reliable remote assistants for your business</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content=""/>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon.png" />
+    <!-- Bootstrap & Plugins CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <!-- Custom CSS -->
+    <link href="assets/css/green5e1f.css?v=2" rel="stylesheet" type="text/css">
+    <link href="assets/css/select-dropdown.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/switch.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/custom-input.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/dashboard-nav.css" rel="stylesheet" type="text/css">
+    <style>
+        body,html{
+            background-color: #fff;
+            color: #000;
+            font-weight: 500;
+        }
+        .nb img{
+            width: 15px;
+            height: 15px;
+        }
+        .semi-bold{
+            font-weight: 700;
+        }
+        .text-orange{
+            color: #fb6332;
+        }
+        .text-orange:hover{
+            color: #e54716;
+        }
+        /*.card .card-body {
+            padding: 0.5rem 1.5rem;
+        }*/
+        .border-bottom{
+            border-bottom: 1px solid #efefef!important;
+        }
+        .page-navs .nav .nav-item {
+            padding: 1rem!important;
+        }
+        .nav.nav-line.nav-color-secondary .nav-item.active {
+            color: #716aca;
+            border-color: #716aca;
+        }
+        .nav.nav-line .nav-item {
+            padding: 15px 20px;
+            color: #575962;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .nav.nav-line .nav-item.active {
+            border-width: 0;
+            background-color: transparent;
+            color: #177dff;
+            border-bottom: 4px solid #177dff;
+            border-radius: 0;
+        }
+        .tab-content .card-header {
+            padding: 0.3rem 0.3rem;
+        }
+        .project-item>:first-child{padding-top: 1em}
+        .card .card-header{
+            border-bottom: none!important;
+        }
+    </style>
+
+</head>
+<body>
+<div class="wrapper compact-wrapper">
+    <div class="loader-wrapper">
+        <div class="loader">
+            <div class="bubble-1"></div>
+            <div class="bubble-2"></div>
+        </div>
+    </div>
+    <div class="main-header">
+        <!-- Logo Header -->
+        <div class="logo-header" data-background-color="orange">
+            <a href="index.html" class="logo ml-auto mr-auto">
+                <img src="" alt="clictask" class="navbar-brand">
+            </a>
+            <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+            </button>
+            <button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+        </div>
+        <!-- End Logo Header -->
+
+        <!-- Navbar Header -->
+        <nav class="navbar navbar-header navbar-expand-lg" data-background-color="orange2">
+            <div class="container-fluid">
+                <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <div class="avatar-sm">
+                                <img src="assets/images/user-suggestion/1-old.jpg" alt="..." class="avatar-img rounded-circle">
+                            </div>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-user animated fadeIn">
+                            <div class="dropdown-user-scroll scrollbar-outer" >
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar-lg"><img src="assets/images/user-suggestion/1-old.jpg" alt="image profile" class="avatar-img rounded"></div>
+                                        <div class="u-text">
+                                            <h4 class="fs-16">Hizrian</h4>
+                                            <p class="text-muted fs-14">hello@themekita.com</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="user-status">
+                                    <div class="status-switch" id="snackbar-user-status">
+                                        <label class="user-online current-status">Online</label>
+                                        <label class="user-invisible">Invisible</label>
+                                        <!-- Status Indicator -->
+                                        <span class="status-indicator" aria-hidden="true"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">My Profile</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link quick-sidebar-toggler">
+                            <i class="icon-logout semi-bold"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+            <div class="sidebar-content">
+                <ul class="nav nav-success">
+                    <li class="nav-item">
+                        <a href="pro-dashboard.html">
+                            <i class="icon-home"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="javascript:void(0);">
+                            <i class="icon-energy semi-bold"></i>
+                            <p>Project History</p>
+                        </a>
+                    </li>
+                    <li class="nav-section">
+                                <span class="sidebar-mini-icon">
+                                    <i class="fa fa-ellipsis-h"></i>
+                                </span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);">
+                            <i class="icon-docs"></i>
+                            <p>E-Resume</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pro-profile.html">
+                            <i class="icon-emotsmile"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="invoice.html">
+                            <i class="icon-settings"></i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);">
+                            <i class="icon-logout"></i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main-panel">
+        <div class="content content-full">
+            <div class="page-inner">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 border-right">
+                        <div class="col-12 mb-2">
+                            <div class="form-group form-group-default">
+                                <label for="projectTitle" class="control-label">Search project title</label>
+                                <input type="search" class="form-control" required name="projectTitle" id="projectTitle">
+                            </div>
+                        </div>
+                        <!---task 1---->
+                        <div class="card-header border-bottom">
+                            <h6 class="font-weight-bold">TRANSLATE 3000 WORDS TO GERMAN</h6>
+                            <p class="font-weight-bold text-muted p-b-10">
+                                Leverage agile frameworks to provide a robust synopsis for high level overviews.
+                                Iterative....
+                            </p>
+                            <h6 class="fs-12"><i class="icon-calendar"></i>&nbsp;&nbsp;23.02.2019&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="icon-location-pin"></i>&nbsp;&nbsp;Lagos, Nigeria
+                            </h6>
+                        </div>
+                        <!----task 2----->
+                        <div class="card-header active-suggestion border-bottom">
+                            <h6 class="font-weight-bold">TRANSLATE 3000 WORDS TO GERMAN</h6>
+                            <p class="font-weight-bold text-muted p-b-10">
+                                Leverage agile frameworks to provide a robust synopsis for high level overviews.
+                                Iterative....
+                            </p>
+                            <h6 class="fs-12"><i class="icon-calendar"></i>&nbsp;&nbsp;23.02.2019&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="icon-location-pin"></i>&nbsp;&nbsp;Lagos, Nigeria
+                            </h6>
+                        </div>
+                        <!----task 3----->
+                        <div class="card-header border-bottom">
+                            <h6 class="font-weight-bold">TRANSLATE 3000 WORDS TO GERMAN</h6>
+                            <p class="font-weight-bold text-muted p-b-10">
+                                Leverage agile frameworks to provide a robust synopsis for high level overviews.
+                                Iterative....
+                            </p>
+                            <h6 class="fs-12"><i class="icon-calendar"></i>&nbsp;&nbsp;23.02.2019&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="icon-location-pin"></i>&nbsp;&nbsp;Lagos, Nigeria
+                            </h6>
+                        </div>
+                        <!----task 4----->
+                        <div class="card-header border-bottom">
+                            <h6 class="font-weight-bold">TRANSLATE 3000 WORDS TO GERMAN</h6>
+                            <p class="font-weight-bold text-muted p-b-10">
+                                Leverage agile frameworks to provide a robust synopsis for high level overviews.
+                                Iterative....
+                            </p>
+                            <h6 class="fs-12"><i class="icon-calendar"></i>&nbsp;&nbsp;23.02.2019&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="icon-location-pin"></i>&nbsp;&nbsp;Lagos, Nigeria
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-lg-8">
+                        <div class="card">
+                        <div class="card-body border-bottom bg-light">
+                            <div class="d-flex flex-row">
+                                <div class="align-self-center">
+                                    <h6 class="text-muted p-b-5">TRANSLATION</h6>
+                                    <h5>TRANSLATE 3000 WORDS TO GERMAN</h5>
+                                </div>
+                                <div class="ml-auto mt-0 p-t-0 align-self-center">
+                                    <button class="btn btn-default btn-lg semi-bold text-orange text-uppercase">Add To Resume</button>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="nav nav-tabs nav-line nav-color-secondary d-flex align-items-center justify-contents-center w-100" role="tablist" id="side-content">
+                                <a class="nav-item active" data-toggle="tab" role="tab" data-target="#Details" href="#" >Project Details</a>
+                                <a href="#" class="nav-item" data-toggle="tab" role="tab" data-target="#Review">Client Review</a>
+                                <a class="nav-item" data-toggle="tab" role="tab" data-target="#Ptasks" href="#" >Project Tasks</a>
+                                <a href="#" class="nav-item" data-toggle="tab" role="tab" data-target="#MTracker">Milestone Tracker</a>
+                                <a href="#" class="nav-item" data-toggle="tab" role="tab" data-target="#ITracker">Issue Tracker</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="tab-content">
+                                    <div class="tab-pane fadeIn active m-b-15" id="Details">
+                                        <div class="row p-t-20">
+                                            <div class="col-md-4 col-4">
+                                                <h6 class="text-muted p-b-10">COMPLETED DATE</h6>
+                                                <p class="p-b-20 font-weight-bold">02.02.2018</p>
+                                            </div>
+                                            <div class="col-md-4 col-4">
+                                                <h6 class="text-muted p-b-10">UPDATE FREQUENCY</h6>
+                                                <p class="p-b-20 font-weight-bold">Hourly</p>
+                                            </div>
+                                            <div class="col-md-4 col-4">
+                                                <h6 class="text-muted p-b-10">TOTAL EARNED</h6>
+                                                <p class="font-weight-bold">&#8358;5600&nbsp;<span class="label label-success semi-bold">Paid</span> </p>
+                                            </div>
+                                        </div>
+                                        <hr class="">
+                                        <h6 class="text-muted p-b-10">TASK OVERVIEW</h6>
+                                        <p class="p-b-20">Enter and sort data in CTH 1 document format Prepare a 10 slide presentation for the upcoming Child Protection summit in Doha.
+                                            The Slides should reflect the current state of the child current state of the childcurrent state of the childcurrent state of the child
+                                        </p>
+                                        <hr class="">
+                                        <h6 class="text-muted p-b-10">EXPECTED RESULT</h6>
+                                        <ul class="list-style-none">
+                                            <li><span><i class="icon-check semi-bold"></i>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Et quidem modi atque at aliquid expedita nemo incidunt</span></li>
+                                            <li><span><i class="icon-check semi-bold"></i>&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem modi atque
+                                    at aliquid expedita nemo incidunt</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fadeIn m-b-15" id="Review">
+                                            <div class="d-flex flex-row p-t-15">
+                                                <div class="align-self-center">
+                                                    <div class="user-pic-big">
+                                                        <a href="pro-dashboard.html">
+                                                            <img alt="Profile Image" width="66" height="66" data-src-retina="assets/images/user-suggestion/2.jpg" src="assets/images/user-suggestion/2.jpg">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="m-l-10 align-self-center">
+                                                    <h5>Blueintern Nigeria Limited</h5>
+                                                    <h6 class="fs-15 text-muted p-t-10"><i class="icon-location-pin"></i>&nbsp;&nbsp;&nbsp;Lagos, Nigeria</h6>
+                                                </div>
+                                            </div>
+                                        <hr class="">
+                                        <div class="row v-align-middle" style="line-height: 30px">
+                                            <!--<div class="col-1 mini-bg align-items-start text-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.5 75.5">
+                                                    <defs>
+                                                        <style>
+                                                            .cls-1 {
+                                                                fill: #fb6332;
+                                                            }
+
+                                                            .cls-2 {
+                                                                fill: #fff;
+                                                            }
+                                                        </style>
+                                                    </defs>
+                                                    <g id="icon-ratings" transform="translate(-1155 -1397)">
+                                                        <circle id="Icon.BG" class="cls-1" cx="37.75" cy="37.75" r="37.75" transform="translate(1155 1397)"/>
+                                                        <path id="time-countdown" class="cls-2" d="M0,17.575A13.587,13.587,0,0,1,13.671,3.9,13.368,13.368,0,0,1,21.877,6.64l1.757-1.76L22.069,3.318a1.887,1.887,0,0,1,0-2.733,1.891,1.891,0,0,1,2.736,0l5.86,5.859a1.888,1.888,0,0,1,0,2.733,1.891,1.891,0,0,1-2.737,0L26.367,7.616,24.609,9.373a13.371,13.371,0,0,1,2.733,8.2A13.587,13.587,0,0,1,13.671,31.246,13.587,13.587,0,0,1,0,17.575Zm3.908,0a9.672,9.672,0,0,0,9.763,9.767,9.673,9.673,0,0,0,9.767-9.767,9.67,9.67,0,0,0-9.767-9.764A9.669,9.669,0,0,0,3.908,17.575Zm7.811,1.952V11.716h3.908v3.907h3.9v3.9Z" transform="translate(1176.75 1419.502)"/>
+                                                    </g>
+                                                </svg>
+                                            </div>-->
+                                            <div class="col-12 border-bottom p-b-10">
+                                                <h6 class="text-muted p-b-5">Reviewed on 22.01.2019</h6>
+                                                <h5 class="p-t-10 p-b-10">PERFORMANCE RATING</h5>
+                                                <div>
+                                                    <h6>Professionalism <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                                                </div>
+                                                <div class="p-t-15">
+                                                    <h6>Timely Delivery <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">60%</span></h6>
+                                                </div>
+                                                <div class="p-t-15">
+                                                    <h6>Communication Skill <span class="badge badge-danger float-right fs-14" style="border-radius: 3px;">33%</span></h6>
+                                                </div>
+                                                <div class="p-t-15">
+                                                    <h6>Quality of Work <span class="badge badge-success float-right fs-14" style="border-radius: 3px;">93%</span></h6>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <h5 class="p-t-10 p-b-10">COMMENT</h5>
+                                                <p class="text-justify">This jQuery plugin generates sparklines (small inline charts) directly in the browser using data supplied
+                                                    either inline in the HTML, or via javascript. The plugin is compatible with most modern browsers and
+                                                    has been tested with Firefox 2+, Safari 3+, Opera 9, Google
+                                                    Chrome and Internet Explorer 6, 7, 8, 9 & 10 as well as iOS and Android</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fadeIn m-b-15" id="Ptasks">
+                                        <div class="col-lg-12 p-t-20">
+                                            <div class="project-item">
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span class="m-b-10">10 mins ago</span>
+                                                    <span class="label label-success">Completed</span>
+                                                </h6>
+                                                <p class="p-b-20" style="text-decoration: line-through;">Call Matthew to request Johns number. After the call, contact Mary and set up an appointment.
+                                                    The Slides should reflect the current state of the child</p>
+                                            </div>
+                                            <div class="project-item">
+                                                <hr class>
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span>18 mins ago</span>
+                                                    <span class="label label-danger">pending</span>
+                                                </h6>
+                                                <p class="p-b-20">Call Matthew to request Johns number. After the call, contact Mary and set up an appointment</p>
+                                            </div>
+                                            <div class="project-item">
+                                                <hr class>
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span>18 mins ago</span>
+                                                    <span class="label label-danger">pending</span>
+                                                </h6>
+                                                <p class="p-b-20">Call Matthew to request Johns number. After the call, contact Mary and set up an appointment</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fadeIn m-b-15" id="MTracker">
+                                        <div class="col-lg-12 p-t-20">
+                                            <div class="project-item">
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span>2 days ago</span>
+                                                    <span class="label label-primary">created by you</span>&nbsp;&nbsp;
+                                                    <span class="label label-success">Completed</span>
+                                                </h6>
+                                                <p class="p-b-20" style="text-decoration: line-through;">
+                                                    Join the two tables together into one edited and functional table and then export them to PDF and excel as per client requirements
+                                                </p>
+                                                <hr class="">
+                                            </div>
+                                            <div class="project-item">
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span>3 days ago</span>
+                                                    <span class="label label-secondary">created by John</span>&nbsp;&nbsp;
+                                                    <span class="label label-danger">pending</span>
+                                                </h6>
+                                                <p class="p-b-20">Send the draft document for the first data entry that has been completed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fadeIn m-b-15" id="ITracker">
+                                        <div class="col-lg-12 p-t-20">
+                                            <div class="project-item">
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span class="label label-primary">created by you</span>&nbsp;&nbsp;
+                                                    <span class="label label-success">Resolved</span> 2days ago
+                                                </h6>
+                                                <p class="p-b-20" style="text-decoration: line-through;">
+                                                    Join the two tables together into one edited and functional table and then export them to PDF and excel as per client requirements
+                                                </p>
+                                            </div>
+                                            <div class="project-item">
+                                                <h6 class="text-muted p-b-10 fs-12 w-100">
+                                                    <span class="label label-secondary">created by John</span>&nbsp;&nbsp;
+                                                    <span class="label label-danger">pending</span> 3days ago
+                                                </h6>
+                                                <p class="p-b-20">Send the draft document for the first data entry that has been completed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/select-dropdown.js"></script>
+<script src="assets/js/switch.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/touchspin.js"></script>
+</html>
